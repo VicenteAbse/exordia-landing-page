@@ -78,12 +78,12 @@ export function Team() {
           </p>
         </div>
 
-        <div className="mt-16 flex gap-6">
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {lawyers.map((lawyer) => (
             <button
               key={lawyer.name}
               onClick={() => setSelected(lawyer)}
-              className="group cursor-pointer text-left rounded-lg border border-border bg-card overflow-hidden transition-all hover:border-foreground/20 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring flex-1 basis-0 min-w-0"
+              className="group cursor-pointer text-left rounded-lg border border-border bg-card overflow-hidden transition-all hover:border-foreground/20 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-label={`Ver perfil de ${lawyer.name}`}
             >
               <div className="relative aspect-[4/5] overflow-hidden">
@@ -95,7 +95,7 @@ export function Team() {
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="p-5">
+              <div className="p-4 sm:p-5">
                 <h3 className="font-serif text-base font-semibold text-foreground sm:text-lg truncate">
                   {lawyer.name}
                 </h3>
@@ -117,7 +117,7 @@ export function Team() {
       </div>
 
       <Dialog open={!!selected} onOpenChange={() => setSelected(null)}>
-        <DialogContent className="sm:max-w-4xl bg-card">
+        <DialogContent className="w-[95vw] lg:w-[85vw] !max-w-[1000px] max-h-[90vh] overflow-y-auto bg-card">
           {selected && (
             <>
               <DialogHeader>
@@ -129,8 +129,8 @@ export function Team() {
                 </DialogDescription>
               </DialogHeader>
 
-              <div className="grid gap-6 sm:grid-cols-[200px_1fr] mt-2">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+              <div className="grid gap-6 mt-2 sm:grid-cols-[200px_1fr]">
+                <div className="relative aspect-[3/4] w-full max-w-[220px] mx-auto sm:mx-0 overflow-hidden rounded-lg">
                   <Image
                     src={selected.image}
                     alt={`Fotografia de ${selected.name}`}

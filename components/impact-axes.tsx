@@ -95,18 +95,23 @@ export function ImpactAxes() {
             </div>
 
             {/* Modal */}
-            <Dialog open={open} onOpenChange={(value) => { 
-                setOpen(value) 
+            <Dialog open={open} onOpenChange={(value) => {
+                setOpen(value)
                 if (!value) {
                     setTimeout(() => setSelected(null), 300)
                 }
-                }}>
-                <DialogContent className="sm:max-w-3xl bg-card data-[state=open]:animate-in data-[state=closed]:animate-out 
-        data-[state=open]:fade-in-0 data-[state=closed]:fade-out-0 data-[state=open]:zoom-in-95 data-[state=closed]:zoom-out-95
-        duration-300 data-[state=closed]:zoom-out-90">
+            }}>
+                <DialogContent
+                    className="w-[95vw] sm:w-auto sm:max-w-3xl max-h-[90vh] overflow-y-auto bg-card
+                    p-5 sm:p-6
+                    data-[state=open]:animate-in data-[state=closed]:animate-out
+                    data-[state=open]:fade-in-0 data-[state=closed]:fade-out-0
+                    data-[state=open]:zoom-in-95 data-[state=closed]:zoom-out-95
+                    duration-300 data-[state=closed]:zoom-out-90"
+                >
                     {selected && (
                         <>
-                            <DialogHeader>
+                            <DialogHeader className="mt-4 sm:mt-0">
                                 <DialogTitle className="font-serif text-2xl text-foreground">
                                     {selected.title}
                                 </DialogTitle>
@@ -116,7 +121,7 @@ export function ImpactAxes() {
                                 </DialogDescription>
                             </DialogHeader>
 
-                            <div className="grid gap-6 sm:grid-[220px_1fr] mt-2">
+                            <div className="mt-2">
 
                                 {/* <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
                   <Image
@@ -127,7 +132,7 @@ export function ImpactAxes() {
                   />
                 </div> */}
 
-                                <div className="text-sm leading-relaxed text-foreground">
+                                <div className="prose prose-sm sm:prose-base max-w-none text-foreground">
                                     {selected.detail}
                                 </div>
 
