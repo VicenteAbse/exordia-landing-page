@@ -28,8 +28,8 @@ const lawyers: Lawyer[] = [
   {
     name: "Camila Ramírez Rebolledo",
     role: "Socia fundadora",
-    image: "/images/Camila-1.jpg",
-    image_sec: "/images/Camila-2.jpg",
+    image: "/images/team-camila-1.jpg",
+    image_sec: "/images/team-camila-2.jpg",
     specialties: ["Derecho Civil ", "Derecho Penal"],
     bio: "Abogada de la Universidad de Chile, candidata a magíster en Derecho en la misma casa de estudios. Desde 2021 dirige la gestión y tramitación de causas en materias civiles, penales, de familia y derechos fundamentales, ejecutando un modelo de litigación con enfoque interseccional. Tiene estudios de postítulo en derechos de la niñez, procedimiento penal y litigación ante el sistema interamericano de derechos humanos. Ha ejercido docencia en la Universidad Adolfo Ibáñez y la Universidad de Santiago. Fue ayudante de cátedra en las Facultades de Economía y Negocios, y de Derecho, ambas de la Universidad de Chile. Su área de trabajo se centra en arbitrajes y resolución alternativa de conflictos, Derecho Civil y Derecho Penal.",
     education: "Universidad de Chile - Abogada",
@@ -40,8 +40,8 @@ const lawyers: Lawyer[] = [
   {
     name: "María Barbosa Barceló",
     role: "Socio fundadora",
-    image: "/images/Maria-1.jpg",
-    image_sec: "/images/Maria-2.jpg",
+    image: "/images/team-maria-1.jpg",
+    image_sec: "/images/team-maria-2.jpg",
     specialties: ["Derecho de Familia", "Derecho Penal"],
     bio: "Abogada de la Universidad de Chile. Tiene un máster en Derecho Penal y Ciencias Criminales por la Universidad de Sevilla, con tesis en materia de consentimiento sexual. Está especializada en violencia sexual, abuso infantil y trauma complejo, con estudios en materias de familia, derecho penal y razonamiento probatorio en el Instituto de Estudios Judiciales y Universidad de Girona, además de formación recibida por instituciones como Fundación para la Confianza y ECPAT. Fue ayudante de la Clínica Jurídica de Familia de la Universidad de Chile y ha sido relatora en capacitaciones para funcionarios públicos y asesora de organizaciones de la sociedad civil en temas de género. Su área de trabajo se centra en Derecho de Familia y Derecho Penal.",
     education: "Universidad de Chile - Abogada",
@@ -52,8 +52,8 @@ const lawyers: Lawyer[] = [
   {
     name: "Lorenzo Lemungürü Kiñenawel",
     role: "Socio fundador",
-    image: "/images/Lorenzo-1.jpg",
-    image_sec: "/images/Lorenzo-2.jpg",
+    image: "/images/team-lorenzo-1.jpg",
+    image_sec: "/images/team-lorenzo-2.jpg",
     specialties: ["Derecho Administrativo", "Derecho Civil", "Derecho Penal"],
     bio: "Egresado de Ciencias Jurídicas y Sociales de la Universidad de Chile. Es investigador académico y ayudante de cátedra en Derecho Indígena, Derecho Procesal y Derecho Penal de la misma casa de estudios. Ha ejercido como consultor y asistente legal de organizaciones de la sociedad civil e integra equipos que representan a ciudadanos ante la Comisión Interamericana de Derechos Humanos. Su área de trabajo se centra en Derecho Administrativo, Derecho Civil y Derecho Penal.",
     education: "Universidad de Chile - Egresado de Derecho",
