@@ -6,37 +6,37 @@ const services = [
     icon: Building2,
     title: "DERECHO ADMINISTRATIVO",
     description:
-      "Brindamos asesoría y representación en materias regulatorias y en la interacción con órganos públicos. Intervenimos en procedimientos sancionatorios e investigaciones sumarias, impugnando actos administrativos ilegales o arbitrarios. Asimismo, ejercemos acciones constitucionales cuando se vulneran derechos fundamentales, con la convicción de que es imperioso limitar las arbitrariedades estatales.",
-  },
-  {
-    icon: Users,
-    title: "DERECHO DE FAMILIAS",
-    description:
-      "Una de nuestras principales características como estudio es poner a las personas en el centro para brindar soluciones que alivien el conflicto familiar. Esto se hace aún más necesario en materias altamente sensibles, que impactan en la vida de niñas, niños y adolescentes y en las economías domésticas. Generamos estrategias integrales desde una ética del cuidado, aplicando perspectiva de derechos y procurando contribuir a los equilibrios personales en disputas relativas a las garantías de las infancias, el quiebre matrimonial, violencia intrafamiliar, etcétera.",
-  },
-  {
-    icon: Gavel,
-    title: "DERECHO PENAL",
-    description:
-      "Gracias a nuestra experiencia en una amplia gama de litigios penales complejos, brindamos asesoría integral y eficiente a personas expuestas a una investigación y, eventualmente, acusación criminal. Asimismo, representamos a víctimas de delitos especialmente sensibles, tales como delitos sexuales y delitos contra la vida; delitos contra la propiedad, delitos económicos, delitos informáticos, entre otros. Impulsamos activamente el desarrollo expedito de una investigación rigurosa y desarrollamos estrategias judiciales que otorguen las mejores soluciones a quienes interactúan con el sistema penal.",
+      "Brindamos asesoría y representación en materias regulatorias, en la interacción con órganos públicos y en procedimientos sancionatorios e investigaciones sumarias. Impugnamos actos administrativos ilegales o arbitrarios y ejercemos acciones constitucionales cuando se vulneran derechos fundamentales, con la convicción de que es imperioso limitar las arbitrariedades estatales.",
   },
   {
     icon: FileText,
     title: "DERECHO CIVIL",
     description:
-      "Nos dedicamos a la tramitación de juicios civiles, ante Juzgados Civiles y Juzgados de Policía Local, procurando satisfacer las necesidades de personas y empresas ante un problema legal. Hemos estudiado para brindar una asesoría integral desde las etapas tempranas del conflicto, planificando estratégicamente las opciones más rentables para quienes representamos en asuntos relativos a bienes inmuebles, defensa del patrimonio, ley de copropiedad, incumplimientos de contratos y responsabilidad tanto del Estado como de particulares.",
+      "Tramitamos juicios civiles ante Juzgados Civiles y Juzgados de Policía Local en Santiago y otras ciudades del país. Brindamos asesoría integral desde las etapas tempranas del conflicto, planificando estratégicamente las opciones más adecuadas y eficientes en asuntos relativos a bienes inmuebles, defensa del patrimonio, ley de copropiedad, incumplimientos de contratos y responsabilidad civil tanto del Estado como de particulares."
   },
   {
-    icon: Shield,
-    title: "ASESORÍA ORGANIZACIONAL Y FORMACIÓN",
+    icon: Users,
+    title: "DERECHO DE FAMILIAS",
     description:
-      "Nuestro interés por transmitir lo que sabemos nos ha permitido desarrollar aptitudes y metodología en el asesoramiento de empresas, organizaciones de la sociedad civil y organismos públicos en materias de género, derechos fundamentales, violencia en el trabajo y diversas materias penales. La creación e implementación de protocolos, reglamentos internos, manuales y herramientas formativas se adecúan a las necesidades y objetivos -encuadrados dentro del marco legal- de cada grupo humano. De la misma forma, realizamos capacitaciones, talleres educativos y cursos formativos diseñados para impactar los espacios de intervención, con el objetivo de generar auténtico interés y compromiso con el aprendizaje en las temáticas que impartimos.",
+      "El conflicto familiar requiere sensibilidad, rigor técnico y una comprensión profunda de su impacto en la vida de las personas. En materias altamente sensibles, como aquellas que involucran a niñas, niños y adolescentes, se hace aún más necesario generar estrategias integrales y éticas. Aplicamos perspectiva de derechos y trabajamos para contribuir a equilibrios personales sostenibles, priorizando siempre la voz de quienes protagonizan el conflicto.",
+  },
+  {
+    icon: Gavel,
+    title: "DERECHO PENAL",
+    description:
+      "Nuestra experiencia en una amplia gama de litigios penales complejos nos permite generar estrategias metódicas y humanas para la defensa de personas imputadas, acusadas y condenadas. Asimismo, nos especializamos en la representación de víctimas de delitos especialmente sensibles, tales como delitos sexuales y delitos contra la vida, además de delitos contra la propiedad, delitos económicos, delitos informáticos, entre otros. Impulsamos investigaciones rigurosas, exigiendo la aplicación de estándares internacionales de derechos humanos.",
   },
   {
     icon: Handshake,
     title: "ARBITRAJES Y RESOLUCIÓN ALTERNATIVA DE CONFLICTOS",
     description:
-      "Ejercemos el litigio arbitral, ante el Centro de Arbitraje y Mediación de la Cámara de Comercio de Santiago, así como árbitros privados designados por la justicia ordinaria en procedimientos de liquidación de sociedad conyugal y de partición de herencia. También comprendemos que muchas veces es mejor llegar a un acuerdo que un litigio financieramente costoso y extenso en el tiempo; en este sentido, nuestra experiencia en negociación se extiende a diversas áreas, incluyendo materias de construcción, conflictos societarios, disputas familiares y salidas alternativas en el proceso penal.",
+      "Ejercemos el litigio arbitral ante el Centro de Arbitraje y Mediación de la Cámara de Comercio de Santiago, así como árbitros privados designados por la justicia ordinaria en procedimientos de liquidación de sociedad conyugal y de partición de herencia. Comprendemos que muchas veces un acuerdo negociado es más eficiente que un juicio prolongado: nuestra experiencia en negociación y mediación se extiende a materias de construcción, conflictos societarios, disputas familiares y salidas alternativas en el proceso penal.",
+  },
+  {
+    icon: Shield,
+    title: "ASESORÍA ORGANIZACIONAL Y FORMACIÓN",
+    description:
+      "Capacitamos y asesoramos empresas, organizaciones de la sociedad civil y organismos públicos en materias de género, derechos fundamentales, violencia en el trabajo, acoso laboral y sexual, y diversas materias penales. Diseñamos e implementamos protocolos, reglamentos internos, manuales y herramientas formativas adaptadas a las necesidades de cada organización. También realizamos talleres y cursos orientados a generar compromiso auténtico con el aprendizaje, no solo cumplimiento formal.",
   },
 ]
 
@@ -73,13 +73,13 @@ export function Services() {
                 </Accordion.Header>
 
                 <Accordion.Content
-  className="
+                  className="
   overflow-hidden
   text-sm
   data-[state=open]:animate-accordion-down
   data-[state=closed]:animate-accordion-up
 "
->
+                >
                   <div className="px-6 pt-4 pb-6 text-muted-foreground leading-relaxed">{service.description}</div>
                 </Accordion.Content>
               </Accordion.Item>

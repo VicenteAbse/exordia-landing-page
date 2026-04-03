@@ -25,69 +25,48 @@ export function Hero() {
   }
 
   return (
-    <section id="inicio" className="relative min-h-[90vh] flex items-center overflow-hidden">
-      
-      {/* Imagen fondo */}
-      <motion.div
-        style={{ y: imageY }}
-        className="absolute inset-0"
-      >
-        <Image
-          src="/images/city-1.jpg"
-          alt="Oficina del bufete de abogados"
-          fill
-          className="object-cover grayscale brightness-[0.35] contrast-150"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40" />
-      </motion.div>
+    <>
+      <section id="inicio" className="relative min-h-[75vh] flex overflow-hidden">
 
-      {/* Contenido */}
-      <motion.div
-        style={{ y: textY }}
-        className="relative z-10 mx-auto max-w-7xl px-6 py-32 md:py-40"
-      >
-        <div className="max-w-4xl">
-          <h3 className="font-serif text-4xl font-semibold leading-tight text-foreground md:text-5xl lg:text-5xl">
-            <span className="block">ESTRATEGIA SÓLIDA</span>
-            <span className="block">CONVICCIONES FIRMES</span>
-            <span className="block">TRANSPARENCIA SIEMPRE</span>
-          </h3>
+        {/* Imagen fondo */}
+        <motion.div
+          style={{ y: imageY }}
+          className="absolute inset-0"
+        >
+          <Image
+            src="/images/home-1.jpg"
+            alt="Oficina del bufete de abogados"
+            fill
+            className="object-cover object-top  brightness-[0.35] contrast-100"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </motion.div>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button
-              size="lg"
-              className="cursor-pointer bg-foreground text-background hover:bg-foreground/90 font-medium text-base px-8"
-              asChild
-            >
-              <a
-                onClick={(e) => {
-                  e.preventDefault()
-                  handleClick("#contacto")
-                }}
-              >
-                Agendar Consulta
-              </a>
-            </Button>
+        {/* Contenido */}
+        <motion.div
+          style={{ y: textY }}
+          className="relative z-10 max-w-7xl px-6 py-32 md:py-40 ml-auto"
+        >
+          <div className="max-w-4xl ml-auto translate-y-30">
+            <h3 className="font-serif text-4xl font-semibold leading-tight text-foreground md:text-5xl lg:text-6xl">
+              <span className="block">ESTRATEGIA SÓLIDA</span>
+              <span className="block">CONVICCIONES FIRMES</span>
+              <span className="block">TRANSPARENCIA SIEMPRE</span>
+            </h3>
 
-            <Button
-              size="lg"
-              variant="outline"
-              className="cursor-pointer border-foreground/30 text-foreground bg-transparent hover:bg-foreground/10 font-medium text-base px-8"
-              asChild
-            >
-              <a
-                onClick={(e) => {
-                  e.preventDefault()
-                  handleClick("#servicios")
-                }}
-              >
-                Nuestros Servicios
-              </a>
-            </Button>
           </div>
+        </motion.div>
+      </section>
+      <section className="bg-black py-16 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-gray-300 font-serif text-lg leading-loose max-w-6xl mx-auto tracking-wide">
+            En Exordia, hacemos que la ley funcione para quienes realmente la necesitan. Defendemos el Derecho para el bien, practicamos la
+            transparencia como norma y ponemos a las personas en el centro. Así, apostamos por elevar el nivel de la profesión jurídica,
+            construyendo resultados sólidos desde Santiago hacia el país.
+          </p>
         </div>
-      </motion.div>
-    </section>
+      </section>
+    </>
   )
 }

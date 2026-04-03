@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "INICIO", href: "#inicio" },
+  // { label: "INICIO", href: "#inicio" },
   { label: "¿QUIÉNES SOMOS?", href: "#quienes-somos" },
   { label: "EQUIPO", href: "#equipo" },
   { label: "SERVICIOS", href: "#servicios" },
@@ -36,11 +36,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
@@ -68,7 +67,10 @@ export function Navbar() {
                 e.preventDefault()
                 handleClick(link.href)
               }}
-              className="rounded-md px-3 py-2 text-sm font-medium text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/10"
+              className={`rounded-md px-3 py-2 text-sm transition-colors ${link.href === "#contacto"
+                  ? "ml-2 text-white bg-red-900 hover:bg-red-800 px-4"
+                  : "text-foreground/70 hover:text-foreground hover:bg-foreground/10"
+                }`}
             >
               {link.label}
             </a>
@@ -104,7 +106,7 @@ export function Navbar() {
                       e.preventDefault()
                       handleClick(link.href)
                     }}
-                    className="rounded-md px-4 py-3 text-base font-medium text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/10"
+                    className="rounded-md px-4 py-3 text-base text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/10"
                   >
                     {link.label}
                   </a>

@@ -3,9 +3,14 @@ import { Geist } from 'next/font/google'
 import { Playfair_Display } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+import { Montserrat } from 'next/font/google'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '600'],
+})
 
 export const metadata: Metadata = {
   title: 'EXORDIA | DERECHO Y LITIGIO HECHO DIFERENTE',
@@ -41,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="font-sans antialiased">
+      <body className={montserrat.className}>
         {children}
         <Analytics />
       </body>

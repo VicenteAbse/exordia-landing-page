@@ -15,6 +15,7 @@ interface Lawyer {
   name: string
   role: string
   image: string
+  image_sec: string
   specialties: string[]
   bio: string
   education: string
@@ -25,33 +26,36 @@ interface Lawyer {
 
 const lawyers: Lawyer[] = [
   {
-    name: "María Barbosa Barceló",
-    role: "Socio fundadora",
-    image: "/images/lawyer-4.jpg",
-    specialties: ["Derecho de Familia", "Derecho Penal"],
-    bio: "María comenzó su práctica en materias civiles y de familia, para luego encantarse con el derecho penal. Cursó un máster en Derecho Penal y Ciencias Criminales en la Universidad de Sevilla, España, haciendo su tesis en materia de consentimiento sexual. Ha cursado también diplomados en Derecho de Familia (IEJ), Abuso Sexual Infantil (Fundación para la Confianza) y Razonamiento Probatorio (Universidad de Girona). También se ha capacitado en acoso laboral y sexual (Poder Judicial), en trauma complejo (IEJ) y en explotación infantil (ECPAT). Durante varios años fue ayudante de la Clínica Jurídica de Familia de la Universidad de Chile, ha sido relatora de diversos cursos en las materias de su especialidad para funcionarios públicos y asesora de organizaciones de la sociedad civil, especialmente en temas de género.",
-    education: "Universidad de Chile - Abogada",
-    email: "mariab@mail.cl",
-    phone: "+569 1234678",
-    languages: ["Español", "Inglés"]
-  },
-  {
     name: "Camila Ramírez Rebolledo",
     role: "Socia fundadora",
-    image: "/images/lawyer-2.jpg",
+    image: "/images/Camila-1.jpg",
+    image_sec: "/images/Camila-2.jpg",
     specialties: ["Derecho Civil ", "Derecho Penal"],
-    bio: "Desde 2021 ha ejercido la dirección, coordinación y planificación de la gestión y tramitación de causas judiciales en materias civiles, penales, de familia y de derechos fundamentales, ejecutando un modelo de litigación con enfoque interseccional. Egresó del Programa de Magíster en Derecho, que imparte la Facultad de Derecho de la Universidad de Chile. Ha realizado estudios de postítulo en materias relativas a derechos de la niñez y familia, así como procedimiento penal chileno, en la Universidad de Chile. También ha participado en cursos sobre aplicación del Protocolo de Minnesota, litigación ante el sistema interamericano de derechos humanos, “Legal Skills in the United States Legal System”, entre otros. Ha realizado labores docentes en la Universidad Adolfo Ibáñez y la Universidad de Santiago. Se ha desempeñado como ayudante de cátedra en las Facultades de Economía y Negocios, y de Derecho, ambas de la Universidad de Chile.Su área de trabajo se centra en arbitrajes y resolución alternativa de conflictos, Derecho Civil y Derecho Penal.",
+    bio: "Abogada de la Universidad de Chile, candidata a magíster en Derecho en la misma casa de estudios. Desde 2021 dirige la gestión y tramitación de causas en materias civiles, penales, de familia y derechos fundamentales, ejecutando un modelo de litigación con enfoque interseccional. Tiene estudios de postítulo en derechos de la niñez, procedimiento penal y litigación ante el sistema interamericano de derechos humanos. Ha ejercido docencia en la Universidad Adolfo Ibáñez y la Universidad de Santiago. Fue ayudante de cátedra en las Facultades de Economía y Negocios, y de Derecho, ambas de la Universidad de Chile. Su área de trabajo se centra en arbitrajes y resolución alternativa de conflictos, Derecho Civil y Derecho Penal.",
     education: "Universidad de Chile - Abogada",
     email: "camilaramirezrebolledo@gmail.com",
     phone: "+569 12345678",
     languages: ["Español"]
   },
   {
+    name: "María Barbosa Barceló",
+    role: "Socio fundadora",
+    image: "/images/Maria-1.jpg",
+    image_sec: "/images/Maria-2.jpg",
+    specialties: ["Derecho de Familia", "Derecho Penal"],
+    bio: "Abogada de la Universidad de Chile. Tiene un máster en Derecho Penal y Ciencias Criminales por la Universidad de Sevilla, con tesis en materia de consentimiento sexual. Está especializada en violencia sexual, abuso infantil y trauma complejo, con estudios en materias de familia, derecho penal y razonamiento probatorio en el Instituto de Estudios Judiciales y Universidad de Girona, además de formación recibida por instituciones como Fundación para la Confianza y ECPAT. Fue ayudante de la Clínica Jurídica de Familia de la Universidad de Chile y ha sido relatora en capacitaciones para funcionarios públicos y asesora de organizaciones de la sociedad civil en temas de género. Su área de trabajo se centra en Derecho de Familia y Derecho Penal.",
+    education: "Universidad de Chile - Abogada",
+    email: "mariab@mail.cl",
+    phone: "+569 1234678",
+    languages: ["Español", "Inglés"]
+  },
+  {
     name: "Lorenzo Lemungürü Kiñenawel",
     role: "Socio fundador",
-    image: "/images/lawyer-3.jpg",
+    image: "/images/Lorenzo-1.jpg",
+    image_sec: "/images/Lorenzo-2.jpg",
     specialties: ["Derecho Administrativo", "Derecho Civil", "Derecho Penal"],
-    bio: "Se ha desempeñado como investigador académico en Derecho Penal y Derecho Indígena, así como ayudante de cátedra de Derecho Indígena, Derecho Procesal y Derecho Penal en la Escuela de Derecho de la Universidad de Chile. Ha ejercido como asistente legal y consultor en organizaciones de la sociedad civil. Integra equipos legales que representan a ciudadanos ante la Comisión Interamericana de Derechos Humanos.",
+    bio: "Egresado de Ciencias Jurídicas y Sociales de la Universidad de Chile. Es investigador académico y ayudante de cátedra en Derecho Indígena, Derecho Procesal y Derecho Penal de la misma casa de estudios. Ha ejercido como consultor y asistente legal de organizaciones de la sociedad civil e integra equipos que representan a ciudadanos ante la Comisión Interamericana de Derechos Humanos. Su área de trabajo se centra en Derecho Administrativo, Derecho Civil y Derecho Penal.",
     education: "Universidad de Chile - Egresado de Derecho",
     email: "lorenzo@mail.com",
     phone: "+569 12345678",
@@ -65,17 +69,10 @@ export function Team() {
   return (
     <section id="equipo" className="bg-background py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
-            Nuestro Equipo
-          </p>
+        <div className="max-w-2xl">
           <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl text-balance">
-            ABOGADOS DE CONFIANZA A SU SERVICIO
+            SOBRE EL EQUIPO
           </h2>
-          <p className="mt-4 leading-relaxed text-muted-foreground">
-            Nuestro equipo esta conformado por profesionales altamente
-            calificados y comprometidos con la excelencia legal.
-          </p>
         </div>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -83,7 +80,7 @@ export function Team() {
             <button
               key={lawyer.name}
               onClick={() => setSelected(lawyer)}
-              className="group cursor-pointer text-left rounded-lg border border-border bg-card overflow-hidden transition-all hover:border-foreground/20 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="uppercase group cursor-pointer text-left rounded-lg border border-border bg-card overflow-hidden transition-all hover:border-foreground/20 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-label={`Ver perfil de ${lawyer.name}`}
             >
               <div className="relative aspect-[4/5] overflow-hidden">
@@ -96,11 +93,10 @@ export function Team() {
                 />
               </div>
               <div className="p-4 sm:p-5">
-                <h3 className="font-serif text-base font-semibold text-foreground sm:text-lg truncate">
+                <h3 className="uppercase font-serif text-base font-semibold text-foreground sm:text-lg truncate">
                   {lawyer.name}
                 </h3>
-                <p className="mt-1 text-sm text-muted-foreground font-medium truncate">{lawyer.role}</p>
-                <div className="mt-3 flex flex-wrap gap-2">
+                {/* <div className="mt-3 flex flex-wrap gap-2">
                   {lawyer.specialties.map((s) => (
                     <span
                       key={s}
@@ -109,7 +105,7 @@ export function Team() {
                       {s}
                     </span>
                   ))}
-                </div>
+                </div> */}
               </div>
             </button>
           ))}
@@ -121,18 +117,15 @@ export function Team() {
           {selected && (
             <>
               <DialogHeader>
-                <DialogTitle className="font-serif text-2xl text-foreground">
+                <DialogTitle className="uppercase font-serif text-2xl text-foreground">
                   {selected.name}
                 </DialogTitle>
-                <DialogDescription className="text-muted-foreground font-medium">
-                  {selected.role}
-                </DialogDescription>
               </DialogHeader>
 
               <div className="grid gap-6 mt-2 sm:grid-cols-[200px_1fr]">
                 <div className="relative aspect-[3/4] w-full max-w-[220px] mx-auto sm:mx-0 overflow-hidden rounded-lg">
                   <Image
-                    src={selected.image}
+                    src={selected.image_sec}
                     alt={`Fotografia de ${selected.name}`}
                     fill
                     className="object-cover"
@@ -140,10 +133,7 @@ export function Team() {
                 </div>
                 <div className="flex flex-col gap-4">
                   <div>
-                    <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-2">
-                      Biografia
-                    </h4>
-                    <p className="text-sm leading-relaxed text-foreground">
+                    <p className="text-sm leading-relaxed text-foreground text-justify">
                       {selected.bio}
                     </p>
                   </div>
@@ -192,13 +182,6 @@ export function Team() {
                     >
                       <Mail className="size-4" />
                       {selected.email}
-                    </a>
-                    <a
-                      href={`tel:${selected.phone}`}
-                      className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Phone className="size-4" />
-                      {selected.phone}
                     </a>
                   </div>
                 </div>

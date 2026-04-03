@@ -4,42 +4,40 @@ export function WhatWeDo() {
     return (
         <section id="quienes-somos" className="bg-background py-24 md:py-32">
             <div className="mx-auto max-w-7xl px-6">
-                <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-                    <div>
-                        <h2 className="mb-3 font-serif text-3xl font-semibold text-foreground md:text-4xl text-balance">
-                            ¿QUÉ HACEMOS?
-                        </h2>
-                        <p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                <h2 className="mb-12 text-center font-serif text-4xl md:text-5xl text-foreground">
+                    ¿QUÉ HACEMOS?
+                </h2>
+                <div className="grid gap-16 lg:grid-cols-12 lg:items-center">
+                    <div className="lg:col-span-7">
+                        <p className="text-xl md:text-3xl font-serif uppercase  text-white">
                             Nuestra experiencia
                         </p>
-                        <p className="mt-6 leading-relaxed text-muted-foreground">
-                            Desde una etapa temprana de nuestra formación académica, nos familiarizamos con el sistema
-                            legal desde su funcionamiento práctico. Hemos asesorado y acompañado a muchas personas en diversos
-                            procedimientos penales, civiles y de familia, ante tribunales de varias ciudades del país, y también
-                            ante Cortes de Apelaciones, Corte Suprema y Tribunal Constitucional, con especial énfasis en representación
-                            de víctimas, tanto de delitos graves como de criminalización injustificada o abusiva.
-                            Gestionamos procedimientos sencillos de forma expedita y eficiente; a la vez que tramitamos -y ganamos-
-                            juicios de alta complejidad y de connotación pública, logrando sentencias que, por un lado, tienen un alto valor
-                            jurisprudencial y, por otro, han cumplido con creces las expectativas de quienes representamos.
+                        <p className="mt-6 leading-relaxed text-muted-foreground text-justify">
+                            Desde etapas tempranas de nuestra formación académica, nos familiarizamos con el
+                            funcionamiento práctico del sistema judicial. Hemos acompañado a personas y
+                            organizaciones en procesos ante tribunales de varias ciudades del país, Cortes de
+                            Apelaciones, la Corte Suprema y el Tribunal Constitucional, con énfasis en
+                            representación de víctimas de delitos graves y de personas afectadas por criminalización
+                            injustificada.
 
                         </p>
-                        <p className="mt-4 leading-relaxed text-muted-foreground">
-                            De todas formas, nuestra experiencia no se ha limitado a tramitar causas ante tribunales. Nuestro ejercicio
-                            profesional se ha alimentado de otros trabajos como la formación de estudiantes, la negociación para evitar
-                            el litigio, la asesoría y colaboración con diversas organizaciones de la sociedad civil, capacitaciones y
-                            actividades docentes, así como la investigación académica.
-                            Por lo tanto, la forma en la que ejercemos la profesión es integral. Se basa en nuestra experiencia en tribunales,
-                            se sujeta a altos estándares técnicos y responde a las necesidades de las personas y organizaciones que representamos.
+                        <p className="mt-4 leading-relaxed text-muted-foreground text-justify">
+                            Gestionamos procedimientos sencillos de forma expedita; y tramitamos juicios de alta
+                            complejidad y connotación pública, logrando sentencias con alto valor jurisprudencial
+                            que han cumplido con creces las expectativas de quienes representamos. A su vez,
+                            nuestra práctica es integral: combina la experiencia en tribunales con investigación
+                            académica, docencia, negociación, asesoría a organizaciones de la sociedad civil y
+                            capacitaciones especializadas.
                         </p>
                     </div>
 
-                    <div className="relative aspect-[4/5] overflow-hidden">
+                    <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] overflow-hidden lg:col-span-5 mt-20">
                         <Image
-                            src="/images/lawyer-1.jpg"
+                            src="/images/Team-2.jpg"
                             alt={`Fotografia del equipo`}
                             fill
                             sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 100vw"
-                            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                     </div>
 
