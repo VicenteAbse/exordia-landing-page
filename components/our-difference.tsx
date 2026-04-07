@@ -61,7 +61,7 @@ export function OurDifference() {
                 <div className="absolute inset-0 bg-black/40" />
 
                 {/* titulo */}
-                <h2 className="relative z-10 font-serif text-4xl md:text-5xl text-white tracking-[0.25em] text-center px-6">
+                <h2 className="relative z-10 text-4xl md:text-5xl text-white tracking-[0.25em] text-center px-6">
                     LO DIFERENTE
                 </h2>
 

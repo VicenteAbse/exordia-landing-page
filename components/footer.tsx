@@ -25,8 +25,8 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2">
               <Scale className="size-6" />
-              <span className="font-serif text-xl font-semibold tracking-wide">
-                Exordia
+              <span className="text-xl font-semibold tracking-wide">
+                ABRyL
               </span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
@@ -68,7 +68,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-border pt-8 flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-xs text-muted-foreground">
-            {"\u00A9"} 2026 EXORDIA. Todos los derechos reservados.
+            {"\u00A9"} 2026 ABRyL. Todos los derechos reservados.
           </p>
           <div className="flex gap-6 text-xs text-muted-foreground">
             <span className="hover:text-foreground transition-colors cursor-pointer">

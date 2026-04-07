@@ -84,16 +84,9 @@ export function Blog() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
-            <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
-              Blog
-            </p>
-            <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl text-balance">
-              Articulos y novedades legales
+            <h2 className="text-3xl font-semibold text-foreground md:text-4xl text-balance uppercase">
+              Blog y recursos
             </h2>
-            <p className="mt-4 max-w-lg leading-relaxed text-muted-foreground">
-              Mantengase informado con los analisis y opiniones de nuestros
-              expertos sobre los temas legales mas relevantes.
-            </p>
           </div>
           <Button
             variant="outline"
@@ -124,7 +117,7 @@ export function Blog() {
                 <span className="inline-block rounded-sm bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
                   {article.category}
                 </span>
-                <h3 className="mt-4 font-serif text-xl font-semibold leading-snug text-foreground text-balance">
+                <h3 className="mt-4 text-xl font-semibold leading-snug text-foreground text-balance">
                   {article.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
@@ -169,7 +162,7 @@ export function Blog() {
               </div>
 
               <div className="px-6 pb-8 pt-2 sm:px-8">
-                <DialogTitle className="font-serif text-2xl font-semibold leading-snug text-foreground sm:text-3xl text-balance">
+                <DialogTitle className="text-2xl font-semibold leading-snug text-foreground sm:text-3xl text-balance">
                   {selected.title}
                 </DialogTitle>
                 <DialogDescription className="sr-only">

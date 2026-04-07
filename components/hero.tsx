@@ -46,10 +46,10 @@ export function Hero() {
         {/* Contenido */}
         <motion.div
           style={{ y: textY }}
-          className="relative z-10 max-w-7xl px-6 py-32 md:py-40 ml-auto"
+          className="relative ml-auto flex items-end px-6 md:px-10"
         >
-          <div className="max-w-4xl ml-auto translate-y-30">
-            <h3 className="font-serif text-4xl font-semibold leading-tight text-foreground md:text-5xl lg:text-6xl">
+          <div className="max-w-4xl ml-auto pb-6 md:pb-10">
+            <h3 className="text-[clamp(1.5rem,6vw,2.5rem)] leading-tight text-foreground md:text-5xl lg:text-6xl">
               <span className="block">ESTRATEGIA SÓLIDA</span>
               <span className="block">CONVICCIONES FIRMES</span>
               <span className="block">TRANSPARENCIA SIEMPRE</span>
@@ -60,8 +60,8 @@ export function Hero() {
       </section>
       <section className="bg-black py-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-gray-300 font-serif text-lg leading-loose max-w-6xl mx-auto tracking-wide">
-            En Exordia, hacemos que la ley funcione para quienes realmente la necesitan. Defendemos el Derecho para el bien, practicamos la
+          <p className="text-gray-300 text-lg leading-loose max-w-6xl mx-auto tracking-wide">
+            En ABRyL, hacemos que la ley funcione para quienes realmente la necesitan. Defendemos el Derecho para el bien, practicamos la
             transparencia como norma y ponemos a las personas en el centro. Así, apostamos por elevar el nivel de la profesión jurídica,
             construyendo resultados sólidos desde Santiago hacia el país.
           </p>

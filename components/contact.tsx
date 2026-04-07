@@ -23,7 +23,7 @@ export function Contact() {
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
             Contacto
           </p>
-          <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl text-balance">
+          <h2 className="text-3xl font-semibold text-foreground md:text-4xl text-balance">
             Estamos aqui para ayudarle
           </h2>
           <p className="mt-4 leading-relaxed text-muted-foreground">
@@ -36,7 +36,7 @@ export function Contact() {
           {/* Info */}
           <div className="flex flex-col gap-8">
             <div className="rounded-lg border border-border bg-card p-8">
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-6">
+              <h3 className="text-xl font-semibold text-foreground mb-6">
                 Información de contacto
               </h3>
               <div className="flex flex-col gap-6">
@@ -71,7 +71,7 @@ export function Contact() {
                   <div>
                     <p className="font-medium text-foreground">Correo</p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      contacto@exordia.com
+                      contacto@abryl.com
                     </p>
                   </div>
                 </div>
@@ -94,13 +94,13 @@ export function Contact() {
 
           {/* Form */}
           <div className="rounded-lg border border-border bg-card p-8">
-            <h3 className="font-serif text-xl font-semibold text-foreground mb-6">
+            <h3 className="text-xl font-semibold text-foreground mb-6">
               Envie su consulta
             </h3>
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-12 text-center">
                 <CheckCircle className="size-12 text-foreground mb-4" />
-                <h4 className="font-serif text-xl font-semibold text-foreground">
+                <h4 className="text-xl font-semibold text-foreground">
                   Mensaje enviado
                 </h4>
                 <p className="mt-2 text-muted-foreground">

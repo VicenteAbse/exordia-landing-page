@@ -2,14 +2,14 @@ import Image from "next/image"
 
 export function WhatWeDo() {
     return (
-        <section id="quienes-somos" className="bg-background py-24 md:py-32">
+        <section id="que-hacemos" className="bg-background py-32 md:py-38">
             <div className="mx-auto max-w-7xl px-6">
-                <h2 className="mb-12 text-center font-serif text-4xl md:text-5xl text-foreground">
+                <h2 className="mb-12 text-center text-4xl md:text-5xl text-foreground">
                     ¿QUÉ HACEMOS?
                 </h2>
                 <div className="grid gap-16 lg:grid-cols-12 lg:items-center">
                     <div className="lg:col-span-7">
-                        <p className="text-xl md:text-3xl font-serif uppercase  text-white">
+                        <p className="text-xl md:text-3xl uppercase  text-white">
                             Nuestra experiencia
                         </p>
                         <p className="mt-6 leading-relaxed text-muted-foreground text-justify">
@@ -33,7 +33,7 @@ export function WhatWeDo() {
 
                     <div className="relative w-full h-[300px] md:h-[400px] lg:h-[450px] overflow-hidden lg:col-span-5 mt-20">
                         <Image
-                            src="/images/Team-2.jpg"
+                            src="/images/1-grupal.jpg"
                             alt={`Fotografia del equipo`}
                             fill
                             sizes="(min-width: 1280px) 33vw, (min-width: 640px) 50vw, 100vw"

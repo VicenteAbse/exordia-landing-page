@@ -43,13 +43,13 @@ const services = [
 export function Services() {
   return (
     <section id="servicios" className="bg-card py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl text-balance">
+     <div className="mx-auto mt-16 mb-24 max-w-7xl px-6 md:px-10 lg:px-16">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl px-8 text-foreground md:text-4xl text-balance">
             ÁREAS DE TRABAJO
           </h2>
         </div>
-        <div className="mt-16 mb-24 mx-auto max-w-7xl">
+        <div className="mt-16 mb-24 px-6">
           <Accordion.Root type="single" collapsible className="space-y-4">
             {services.map((service) => (
               <Accordion.Item
@@ -58,12 +58,12 @@ export function Services() {
                 className="rounded-lg border border-border bg-background"
               >
                 <Accordion.Header>
-                  <Accordion.Trigger className="group flex w-full items-center justify-between p-6 text-left transition hover:bg-muted/40">
+                  <Accordion.Trigger className="group flex w-full items-center justify-between p-8 md:p-10 text-left transition hover:bg-muted/40">
                     <div className="flex items-center gap-4">
-                      <div className="flex size-12 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                      <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                         <service.icon className="size-6" />
                       </div>
-                      <h3 className="font-serif text-lg font-semibold text-foreground">
+                      <h3 className="text-xl font-semibold text-foreground">
                         {service.title}
                       </h3>
                     </div>
@@ -75,12 +75,13 @@ export function Services() {
                 <Accordion.Content
                   className="
   overflow-hidden
-  text-sm
+  text-lg
   data-[state=open]:animate-accordion-down
   data-[state=closed]:animate-accordion-up
+  text-justify
 "
                 >
-                  <div className="px-6 pt-4 pb-6 text-muted-foreground leading-relaxed">{service.description}</div>
+                  <div className="px-6 pt-4 pb-6 leading-relaxed">{service.description}</div>
                 </Accordion.Content>
               </Accordion.Item>
             ))}

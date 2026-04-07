@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button"
 const navLinks = [
   // { label: "INICIO", href: "#inicio" },
   { label: "¿QUIÉNES SOMOS?", href: "#quienes-somos" },
-  { label: "EQUIPO", href: "#equipo" },
-  { label: "SERVICIOS", href: "#servicios" },
+  { label: "¿QUÉ HACEMOS?", href: "#que-hacemos" },
+  { label: "LA DIFERENCIA", href: "#difference" },
   { label: "BLOG", href: "#blog" },
   { label: "CONTACTO", href: "#contacto" },
 ]
@@ -37,8 +37,8 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border"
-          : "bg-transparent"
+        ? "bg-[#1E1D1D]/95 backdrop-blur-md shadow-lg border-b border-border"
+        : "bg-transparent"
         }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -51,10 +51,7 @@ export function Navbar() {
           }}
           className="flex items-center gap-2 text-foreground"
         >
-          <img src="/Logo-Detalle.svg" alt="Logo" className="h-18 w-auto" />
-          {/* <span className="font-serif text-lg font-semibold tracking-wide">
-            EXORDIA
-          </span> */}
+          <img src="/logo-abryl-detalle.svg" alt="Logo" className="h-18 w-auto" />
         </a>
 
         {/* Desktop nav links - top right */}
@@ -68,20 +65,13 @@ export function Navbar() {
                 handleClick(link.href)
               }}
               className={`rounded-md px-3 py-2 text-sm transition-colors ${link.href === "#contacto"
-                  ? "ml-2 text-white bg-red-900 hover:bg-red-800 px-4"
-                  : "text-foreground/70 hover:text-foreground hover:bg-foreground/10"
+                ? "ml-2 text-white bg-red-900 hover:bg-red-800 px-4"
+                : "text-foreground/70 hover:text-foreground hover:bg-foreground/10"
                 }`}
             >
               {link.label}
             </a>
           ))}
-          {/* <Button
-            onClick={() => handleClick("#contacto")}
-            size="sm"
-            className="ml-2 bg-foreground text-background hover:bg-foreground/90 font-medium"
-          >
-            Consulta Gratuita
-          </Button> */}
         </nav>
 
         {/* Mobile hamburger */}
@@ -106,17 +96,14 @@ export function Navbar() {
                       e.preventDefault()
                       handleClick(link.href)
                     }}
-                    className="rounded-md px-4 py-3 text-base text-foreground/70 transition-colors hover:text-foreground hover:bg-foreground/10"
+                    className={`px-4 py-3 text-base transition-colors ${link.href === "#contacto"
+                        ? "text-white bg-red-900 hover:bg-red-800"
+                        : "rounded-md text-foreground/70 hover:text-foreground hover:bg-foreground/10"
+                      }`}
                   >
                     {link.label}
                   </a>
                 ))}
-                {/* <Button
-                  onClick={() => handleClick("#contacto")}
-                  className="mt-3 mx-4 bg-foreground text-background hover:bg-foreground/90 font-medium"
-                >
-                  Consulta Gratuita
-                </Button> */}
               </nav>
             </SheetContent>
           </Sheet>

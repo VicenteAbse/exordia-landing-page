@@ -13,24 +13,24 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'EXORDIA | DERECHO Y LITIGIO HECHO DIFERENTE',
+  title: 'ABRyL | DERECHO Y LITIGIO HECHO DIFERENTE',
   description: 'Bufete de abogados con amplia experiencia en derecho corporativo, civil, penal y familiar. Consulta gratuita.',
   icons: {
     icon: [
       {
-        url: '/Logo-Simple.svg',
+        url: '/logo-simple-3.svg',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/Logo-Simple.svg',
+        url: '/logo-simple-3.svg',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/Logo-Simple.svg',
+        url: '/logo-simple-3.svg',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/Logo-Simple.svg.png',
+    apple: '/logo-simple-3.svg.png',
   },
 }
 
