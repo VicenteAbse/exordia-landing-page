@@ -10,6 +10,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog"
 import { Mail, Phone } from "lucide-react"
+import { motion } from "framer-motion"
 
 interface Lawyer {
   name: string
@@ -68,19 +69,42 @@ export function Team() {
   const [open, setOpen] = useState(false)
 
   return (
-    <section id="equipo" className="bg-background py-24 md:py-32">
+    <section id="equipo" className="bg-card py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-semibold text-foreground md:text-4xl text-balance">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-3xl text-foreground md:text-4xl text-balance"
+          >
             SOBRE EL EQUIPO
-          </h2>
+          </motion.h2>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+        >
           {lawyers.map((lawyer) => (
-            <button
+            <motion.button
               key={lawyer.name}
-              onClick={() => {setSelected(lawyer); setOpen(true)}}
+              onClick={() => { setSelected(lawyer); setOpen(true) }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true }}
               className="uppercase group cursor-pointer text-left rounded-lg border border-border bg-card overflow-hidden transition-all hover:border-foreground/20 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-label={`Ver perfil de ${lawyer.name}`}
             >
@@ -94,33 +118,23 @@ export function Team() {
                 />
               </div>
               <div className="p-4 sm:p-5">
-                <h3 className="uppercase text-base font-semibold text-foreground sm:text-lg truncate">
+                <h3 className="uppercase text-base text-foreground sm:text-lg truncate">
                   {lawyer.name}
                 </h3>
-                {/* <div className="mt-3 flex flex-wrap gap-2">
-                  {lawyer.specialties.map((s) => (
-                    <span
-                      key={s}
-                      className="rounded-sm bg-secondary px-2 py-0.5 text-xs text-muted-foreground"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div> */}
               </div>
-            </button>
+            </motion.button>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       <Dialog open={open} onOpenChange={(value) => {
-                setOpen(value)
-                if (!value) {
-                    setTimeout(() => {
-                        setSelected(null)
-                    }, 300)
-                }
-            }}>
+        setOpen(value)
+        if (!value) {
+          setTimeout(() => {
+            setSelected(null)
+          }, 300)
+        }
+      }}>
         <DialogContent className="w-[95vw] lg:w-[85vw] !max-w-[1000px] max-h-[90vh] overflow-y-auto bg-card">
           {selected && (
             <>
@@ -146,7 +160,7 @@ export function Team() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                    <h4 className="text-sm  uppercase tracking-wider text-muted-foreground mb-2">
                       Formacion Academica
                     </h4>
                     <p className="text-sm leading-relaxed text-foreground">
@@ -154,7 +168,7 @@ export function Team() {
                     </p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                    <h4 className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
                       Especialidades
                     </h4>
                     <div className="flex flex-wrap gap-2">
@@ -169,7 +183,7 @@ export function Team() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                    <h4 className="text-sm uppercase tracking-wider text-muted-foreground mb-2">
                       Idiomas
                     </h4>
                     <div className="flex flex-wrap gap-2">

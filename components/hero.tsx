@@ -26,7 +26,7 @@ export function Hero() {
 
   return (
     <>
-      <section id="inicio" className="relative min-h-[75vh] flex overflow-hidden">
+      <section id="inicio" className="relative min-h-[75vh] flex overflow-hidden bg-[#1E1D1D]/95">
 
         {/* Imagen fondo */}
         <motion.div
@@ -58,12 +58,12 @@ export function Hero() {
           </div>
         </motion.div>
       </section>
-      <section className="bg-black py-16 px-6">
+      <section className="bg-[#1E1D1D]/95 py-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-300 text-lg leading-loose max-w-6xl mx-auto tracking-wide">
             En ABRyL, hacemos que la ley funcione para quienes realmente la necesitan. Defendemos el Derecho para el bien, practicamos la
-            transparencia como norma y ponemos a las personas en el centro. Así, apostamos por elevar el nivel de la profesión jurídica,
-            construyendo resultados sólidos desde Santiago hacia el país.
+            transparencia como norma y ponemos a las personas en el centro. Así, apostamos por elevar el nivel de la profesión jurídica, construyendo resultados sólidos 
+            en las regiones Metropolitana y de Valparaíso.
           </p>
         </div>
       </section>

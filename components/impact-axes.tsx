@@ -9,6 +9,7 @@ import {
     DialogTitle,
     DialogDescription,
 } from "@/components/ui/dialog"
+import { motion } from "framer-motion"
 
 interface Axis {
     title: string
@@ -51,21 +52,29 @@ export function ImpactAxes() {
     const [expanded, setExpanded] = useState(false)
 
     return (
-        <section id="impacto" className="bg-background py-24 md:py-32">
+        <section id="impacto" className="bg-card py-24 md:py-32">
             <div className="mx-auto max-w-7xl px-6">
 
                 {/* Header */}
-                <div className="max-w-2xl">
+                <div>
 
-                    <h2 className="text-3xl font-semibold text-foreground md:text-4xl text-balance">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 2 }}
+                        viewport={{ once: true }}
+                        className="text-3xl text-foreground md:text-4xl text-balance">
                         EJES DE IMPACTO
-                    </h2>
+                    </motion.h2>
 
-                    <p className="mt-4 leading-relaxed text-muted-foreground">
+                    <motion.p initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true }} className="mt-4 leading-relaxed text-muted-foreground">
                         Más allá de las áreas de práctica, nuestro trabajo está guiado por ejes de impacto que constituyen nuestra
                         identidad y desde los cuales fijamos objetivos de transformación social. Elegimos nuestras causas —y las trabajamos—
                         en función de estos compromisos.
-                    </p>
+                    </motion.p>
                 </div>
 
                 {/* Cards */}
@@ -86,7 +95,7 @@ export function ImpactAxes() {
                             </div>
 
                             <div className="p-5 h-[120px] flex items-center">
-                                <h3 className="text-lg font-semibold text-foreground uppercase">
+                                <h3 className="text-lg text-foreground uppercase">
                                     {axis.title}
                                 </h3>
                             </div>
@@ -117,7 +126,7 @@ export function ImpactAxes() {
                         <>
                             {/* Título */}
                             <DialogHeader className="mt-2">
-                                <DialogTitle className="text-2xl md:text-3xl font-semibold text-foreground uppercase">
+                                <DialogTitle className="text-2xl md:text-3xl text-foreground uppercase">
                                     {selected.title}
                                 </DialogTitle>
                             </DialogHeader>

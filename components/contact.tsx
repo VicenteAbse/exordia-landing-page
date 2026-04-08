@@ -20,23 +20,16 @@ export function Contact() {
     <section id="contacto" className="bg-background py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
+          <h2 className="text-3xl text-foreground md:text-4xl text-balance uppercase">
             Contacto
-          </p>
-          <h2 className="text-3xl font-semibold text-foreground md:text-4xl text-balance">
-            Estamos aqui para ayudarle
           </h2>
-          <p className="mt-4 leading-relaxed text-muted-foreground">
-            Agende una consulta gratuita y permita que nuestros expertos
-            analicen su caso sin compromiso alguno.
-          </p>
         </div>
 
         <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           {/* Info */}
           <div className="flex flex-col gap-8">
             <div className="rounded-lg border border-border bg-card p-8">
-              <h3 className="text-xl font-semibold text-foreground mb-6">
+              <h3 className="text-xl text-foreground mb-6">
                 Información de contacto
               </h3>
               <div className="flex flex-col gap-6">
@@ -82,9 +75,9 @@ export function Contact() {
                   <div>
                     <p className="font-medium text-foreground">Horario</p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Lunes a Viernes: 9:00 - 18:00
+                      Lunes a Jueves: 9:00 - 18:00
                       <br />
-                      Sabado: 9:00 - 14:00
+                      Viernes: 9:00 - 14:00
                     </p>
                   </div>
                 </div>
@@ -159,6 +152,11 @@ export function Contact() {
                     required
                     className="bg-background border-border text-foreground placeholder:text-muted-foreground resize-none"
                   />
+                  <p className="mt-1 text-sm">
+                    *Si tu consulta se relaciona con alguna situación de violencia o discriminación, 
+                    no es necesario que nos escribas nada más que el asunto general, sin incluir relato. 
+                    Por ejemplo: violencia intrafamiliar, delito sexual, maltrato infantil, etc. 
+                  </p>
                 </div>
                 <Button
                   type="submit"
@@ -166,7 +164,7 @@ export function Contact() {
                   className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium w-full sm:w-auto"
                 >
                   <Send className="mr-2 size-4" />
-                  Enviar Consulta
+                  Contáctanos
                 </Button>
               </form>
             )}

@@ -3,7 +3,7 @@ import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Services } from "@/components/services"
 import { Team } from "@/components/team"
-import { Blog } from "@/components/blog"
+import { BlogSection } from "@/components/blog-section"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import { WhatWeDo } from "@/components/what-we-do"
@@ -23,9 +23,8 @@ export default function Home() {
       <ImpactAxes />
       <Testimonials />
       <OurDifference />
-      <Blog />
+      <BlogSection />
       <Contact />
-      <Footer />
     </main>
   )
 }

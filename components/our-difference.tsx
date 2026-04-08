@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 interface Item {
     title: string
@@ -42,72 +43,90 @@ const items: Item[] = [
 ]
 
 export function OurDifference() {
-    const [openIndex, setOpenIndex] = useState<number | null>(null)
-
     return (
         <section id="difference" className="w-full">
 
-            {/* Hero con imagen de fondo */}
             <div className="relative h-[480px] w-full flex items-start justify-center pt-90 overflow-hidden">
 
-                <Image
-                    src="/images/our-difference-bg.jpg"
-                    alt="Justice"
-                    fill
-                    className="object-cover grayscale brightness-[0.45] contrast-125"
-                />
+                <motion.div
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1 }}
+                    viewport={{ once: true }}
+                    className="absolute inset-0">
 
-                {/* overlay */}
+                    <Image
+                        src="/images/our-difference-bg.jpg"
+                        alt="Justice"
+                        fill
+                        className="object-cover grayscale brightness-[0.45] contrast-125"
+                    />
+                </motion.div>
+
                 <div className="absolute inset-0 bg-black/40" />
 
-                {/* titulo */}
-                <h2 className="relative z-10 text-4xl md:text-5xl text-white tracking-[0.25em] text-center px-6">
+                <motion.h2
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 2 }}
+                    viewport={{ once: true }} 
+                    className="relative z-10 text-4xl md:text-5xl text-white tracking-[0.25em] text-center px-6">
                     LO DIFERENTE
-                </h2>
+                </motion.h2>
 
             </div>
 
             {/* contenido */}
             <div className="bg-black py-24">
-                <div className="mx-auto max-w-4xl px-6">
+                <div className="mx-auto max-w-7xl px-6">
 
-                    <div className="space-y-6">
+                    <motion.div
+                        className="space-y-10"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={{
+                            hidden: {},
+                            visible: {
+                                transition: {
+                                    staggerChildren: 0.15,
+                                },
+                            },
+                        }}
+                    >
 
-                        {items.map((item, index) => {
-                            const open = openIndex === index
-
-                            return (
-                                <div
-                                    key={item.title}
-                                    className="border-b border-white/20 pb-6"
-                                >
-
-                                    <button
-                                        onClick={() =>
-                                            setOpenIndex(open ? null : index)
-                                        }
-                                        className="flex w-full justify-between text-left text-white font-medium text-lg cursor-pointer"
-                                    >
+                        {items.map((item) => (
+                            <motion.div
+                                key={item.title}
+                                className="pb-6"
+                                variants={{
+                                    hidden: { opacity: 0, y: 80 },
+                                    visible: {
+                                        opacity: 1,
+                                        y: 0,
+                                        transition: {
+                                            duration: 1,
+                                            ease: [0.22, 1, 0.36, 1],
+                                        },
+                                    },
+                                }}
+                            >
+                                <div className="inline-block">
+                                    <h3 className="text-xl">
                                         {item.title}
-                                        <span className="text-white/60">
-                                            {open ? "−" : "+"}
-                                        </span>
-                                    </button>
-
-                                    <div className={`grid transition-all duration-500 ease-in-out 
-                                    ${open ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0"}`}>
-                                        <div className="overflow-hidden">
-                                            <p className="text-white/80 leading-relaxed text-sm">
-                                                {item.content}
-                                            </p>
-                                        </div>
-                                    </div>
-
+                                    </h3>
+                                    <div className="mt-2 h-[1px] w-full bg-red-900/80" />
                                 </div>
-                            )
-                        })}
 
-                    </div>
+                                {/* contenido */}
+                                <p className="text-white/80 leading-relaxed text-base text-justify">
+                                    {item.content}
+                                </p>
+                            </motion.div>
+                        ))}
+
+                    </motion.div>
+
                 </div>
             </div>
 

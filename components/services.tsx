@@ -1,5 +1,8 @@
+"use client"
+
 import { Building2, Users, Gavel, FileText, Shield, Handshake } from "lucide-react"
 import * as Accordion from "@radix-ui/react-accordion"
+import { motion } from "framer-motion"
 
 const services = [
   {
@@ -43,52 +46,78 @@ const services = [
 export function Services() {
   return (
     <section id="servicios" className="bg-card py-24 md:py-32">
-     <div className="mx-auto mt-16 mb-24 max-w-7xl px-6 md:px-10 lg:px-16">
+      <div className="mx-auto max-w-7xl px-6">
+
         <div className="max-w-2xl">
-          <h2 className="text-3xl px-8 text-foreground md:text-4xl text-balance">
+          <motion.h2 initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, ease: [0.25, 0.1, 0.25, 1] }}
+            viewport={{ once: true, margin: "-100px" }} className="text-3xl text-foreground md:text-4xl text-balance">
             ÁREAS DE TRABAJO
-          </h2>
+          </motion.h2>
         </div>
-        <div className="mt-16 mb-24 px-6">
+        <motion.div
+          className="mt-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+        >
           <Accordion.Root type="single" collapsible className="space-y-4">
             {services.map((service) => (
-              <Accordion.Item
+              <motion.div
                 key={service.title}
-                value={service.title}
-                className="rounded-lg border border-border bg-background"
+                variants={{
+                  hidden: { opacity: 0, y: 80 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 1.2,
+                      ease: [0.22, 1, 0.36, 1],
+                    },
+                  },
+                }}
               >
-                <Accordion.Header>
-                  <Accordion.Trigger className="group flex w-full items-center justify-between p-8 md:p-10 text-left transition hover:bg-muted/40">
-                    <div className="flex items-center gap-4">
-                      <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                        <service.icon className="size-6" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-foreground">
-                        {service.title}
-                      </h3>
-                    </div>
-
-                    <span className="text-muted-foreground transition-transform duration-300 data-[state=open]:rotate-45">+</span>
-                  </Accordion.Trigger>
-                </Accordion.Header>
-
-                <Accordion.Content
-                  className="
-  overflow-hidden
-  text-lg
-  data-[state=open]:animate-accordion-down
-  data-[state=closed]:animate-accordion-up
-  text-justify
-"
+                <Accordion.Item
+                  value={service.title}
+                  className="rounded-lg border border-border bg-background"
                 >
-                  <div className="px-6 pt-4 pb-6 leading-relaxed">{service.description}</div>
-                </Accordion.Content>
-              </Accordion.Item>
+                  <Accordion.Header>
+                    <Accordion.Trigger className="group flex w-full items-center justify-between p-8 md:p-10 text-left transition hover:bg-muted/40">
+                      <div className="flex items-center gap-4">
+                        <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+                          <service.icon className="size-6" />
+                        </div>
+                        <h3 className="text-xl text-foreground">
+                          {service.title}
+                        </h3>
+                      </div>
+
+                      <span className="text-muted-foreground transition-transform duration-300 data-[state=open]:rotate-45">
+                        +
+                      </span>
+                    </Accordion.Trigger>
+                  </Accordion.Header>
+
+                  <Accordion.Content className="overflow-hidden text-lg data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up text-justify">
+                    <div className="px-6 pt-4 pb-6 leading-relaxed">
+                      {service.description}
+                    </div>
+                  </Accordion.Content>
+                </Accordion.Item>
+              </motion.div>
             ))}
           </Accordion.Root>
-        </div>
+        </motion.div>
       </div>
-    </section>
-
-  )
+    </section >
+  );
 }
