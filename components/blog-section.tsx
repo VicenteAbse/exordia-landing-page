@@ -44,7 +44,7 @@ export function BlogSection() {
               key={article.title}
               onClick={() => setSelected(article)}
               className="group flex flex-col rounded-lg border border-border bg-background overflow-hidden transition-all hover:border-foreground/20 hover:shadow-md text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label={`Leer articulo: ${article.title}`}
+              aria-label={`Leer artículo: ${article.title}`}
             >
               <div className="relative h-48 w-full overflow-hidden">
                 <Image
@@ -61,9 +61,9 @@ export function BlogSection() {
                 <h3 className="mt-4 text-xl leading-snug text-foreground text-balance">
                   {article.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {/* <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {article.excerpt}
-                </p>
+                </p> */}
               </div>
               <div className="border-t border-border px-6 py-4">
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
@@ -106,9 +106,9 @@ export function BlogSection() {
                 <DialogTitle className="text-2xl leading-snug text-foreground sm:text-3xl text-balance">
                   {selected.title}
                 </DialogTitle>
-                <DialogDescription className="sr-only">
+                {/* <DialogDescription className="sr-only">
                   {selected.excerpt}
-                </DialogDescription>
+                </DialogDescription> */}
 
                 <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                   <span className="flex items-center gap-1.5">
@@ -119,13 +119,13 @@ export function BlogSection() {
                     <Calendar className="size-4" />
                     {selected.date}
                   </span>
-                  <span className="flex items-center gap-1.5">
+                  {/* <span className="flex items-center gap-1.5">
                     <Clock className="size-4" />
                     {selected.readTime}
-                  </span>
+                  </span> */}
                 </div>
 
-                <div className="mt-8 flex flex-col gap-5">
+                {/* <div className="mt-8 flex flex-col gap-5">
                   {selected.body.map((paragraph, i) => (
                     <p
                       key={i}
@@ -134,7 +134,7 @@ export function BlogSection() {
                       {paragraph}
                     </p>
                   ))}
-                </div>
+                </div> */}
 
                 <div className="mt-10 flex items-center justify-between border-t border-border pt-6">
                   <Button
@@ -143,14 +143,14 @@ export function BlogSection() {
                     onClick={() => setSelected(null)}
                   >
                     <ArrowLeft className="mr-2 size-4" />
-                    Volver al blog
+                    Volver
                   </Button>
                   <Button
                     className="bg-foreground text-background hover:bg-foreground/90"
                     asChild
                   >
-                    <a href="#contacto" onClick={() => setSelected(null)}>
-                      Consultar sobre este tema
+                    <a href={`/blog/${selected.slug}`} onClick={() => setSelected(null)}>
+                      Leer artículo
                     </a>
                   </Button>
                 </div>

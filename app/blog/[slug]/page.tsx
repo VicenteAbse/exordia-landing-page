@@ -26,10 +26,10 @@ export default async function ArticlePage({ params }: Props) {
 
                 {/* volver */}
                 <Link href="/blog">
-                    <button className="mb-8 flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition">
-                        <ArrowLeft className="size-4" />
-                        Volver al blog
-                    </button>
+                    <button className="group mb-6 flex items-center gap-2 border border-border text-foreground px-4 py-2 rounded-md hover:bg-background hover:border-foreground/30 cursor-pointer transition-all duration-200">
+                            <ArrowLeft className="size-4 transition-transform duration-200 group-hover:-translate-x-1" />
+                            Ver todos los artículos
+                        </button>
                 </Link>
 
                 {/* imagen */}
@@ -62,23 +62,19 @@ export default async function ArticlePage({ params }: Props) {
                         <Calendar className="size-4" />
                         {article.date}
                     </span>
-                    <span className="flex items-center gap-1.5">
+                    {/* <span className="flex items-center gap-1.5">
                         <Clock className="size-4" />
                         {article.readTime}
-                    </span>
+                    </span> */}
                 </div>
 
                 {/* contenido */}
-                <div className="mt-10 flex flex-col gap-6">
-                    {article.body.map((paragraph, i) => (
-                        <p
-                            key={i}
-                            className="text-base leading-relaxed text-foreground/80 text-justify"
-                        >
-                            {paragraph}
-                        </p>
-                    ))}
-                </div>
+                <div
+                    className="mt-10 text-base leading-relaxed text-foreground/80 text-justify
+             [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:text-2xl [&_h2]:text-foreground
+             [&_p]:mb-6"
+                    dangerouslySetInnerHTML={{ __html: article.body }}
+                />
 
             </div>
         </section>

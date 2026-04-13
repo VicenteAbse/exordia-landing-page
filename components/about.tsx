@@ -8,7 +8,7 @@ export function About() {
     <section id="quienes-somos" className="bg-card w-full">
 
       {/* Hero con imagen de fondo */}
-      <div className="relative h-[300px] w-full flex items-start justify-center pt-50 overflow-hidden">
+      <div className="relative h-[340px] w-full flex items-center justify-center overflow-hidden">
 
         {/* Imagen animada */}
         <motion.div
@@ -30,7 +30,7 @@ export function About() {
         <div className="absolute inset-0 bg-black/40" />
 
         {/* titulo */}
-        <h2 className="relative z-10 text-4xl md:text-5xl text-white tracking-[0.25em] text-center px-6">
+        <h2 className="relative z-10 mt-52 text-4xl md:text-5xl text-white tracking-[0.25em] text-center px-6">
           ¿QUIÉNES SOMOS?
         </h2>
 

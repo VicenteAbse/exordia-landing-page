@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -11,6 +11,7 @@ export function Contact() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState("")
+  const formStartedAt = useRef(Date.now());
 
   const [formData, setFormData] = useState({
     nombre: "",
@@ -18,7 +19,8 @@ export function Contact() {
     telefono: "",
     asunto: "",
     mensaje: "",
-  })
+    website: "",
+  });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -42,7 +44,10 @@ export function Contact() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          formStartedAt: formStartedAt.current,
+        }),
       })
 
       const data = await response.json()
@@ -59,7 +64,10 @@ export function Contact() {
         telefono: "",
         asunto: "",
         mensaje: "",
+        website: ""
       })
+
+      formStartedAt.current = Date.now()
 
       setTimeout(() => setSubmitted(false), 4000)
     } catch (error) {
@@ -125,7 +133,7 @@ export function Contact() {
                   <div>
                     <p className="font-medium text-foreground">Correo</p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      contacto@abryl.com
+                      contacto@abryl.cl
                     </p>
                   </div>
                 </div>
@@ -192,6 +200,17 @@ export function Contact() {
                       placeholder="juan@ejemplo.com"
                       required
                       className="bg-background border-border text-foreground placeholder:text-muted-foreground"
+                    />
+                  </div>
+
+                  <div className="hidden" aria-hidden="true">
+                    <Label htmlFor="website">Website</Label>
+                    <Input
+                      id="website"
+                      value={formData.website}
+                      onChange={handleChange}
+                      tabIndex={-1}
+                      autoComplete="off"
                     />
                   </div>
                 </div>

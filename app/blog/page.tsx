@@ -29,7 +29,7 @@ export default function BlogPage() {
                     <Link href="/#blog">
                         <button className="group mb-6 flex items-center gap-2 border border-border text-foreground px-4 py-2 rounded-md hover:bg-background hover:border-foreground/30 cursor-pointer transition-all duration-200">
                             <ArrowLeft className="size-4 transition-transform duration-200 group-hover:-translate-x-1" />
-                            Volver
+                            Volver a la página principal
                         </button>
                     </Link>
 
@@ -76,9 +76,9 @@ export default function BlogPage() {
                                         {article.title}
                                     </h3>
 
-                                    <p className="mt-2 text-xs leading-relaxed text-muted-foreground line-clamp-3">
+                                    {/* <p className="mt-2 text-xs leading-relaxed text-muted-foreground line-clamp-3">
                                         {article.excerpt}
-                                    </p>
+                                    </p> */}
                                 </div>
 
                                 <div className="border-t border-border px-4 py-3">

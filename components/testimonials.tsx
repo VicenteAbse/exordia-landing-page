@@ -4,6 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useEffect, useRef } from "react";
 
 interface Testimonial {
   name: string
@@ -50,6 +51,96 @@ const testimonials: Testimonial[] = [
 export function Testimonials() {
   const [index, setIndex] = useState(0)
   const [direction, setDirection] = useState(0)
+  const scrollRef = useRef<HTMLDivElement | null>(null)
+  const pauseUntilRef = useRef(0)
+  const resumeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const isAutoScrollingRef = useRef(false)
+
+  const pauseAutoScroll = () => {
+    if (isAutoScrollingRef.current) return
+
+    pauseUntilRef.current = Date.now() + 10000
+
+    if (resumeTimeoutRef.current) {
+      clearTimeout(resumeTimeoutRef.current)
+    }
+
+    resumeTimeoutRef.current = setTimeout(() => {
+      pauseUntilRef.current = 0
+    }, 3000)
+  }
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+
+    let interval: ReturnType<typeof setInterval> | null = null
+    let startTimeout: ReturnType<typeof setTimeout> | null = null
+    let endTimeout: ReturnType<typeof setTimeout> | null = null
+    let stopped = false
+
+    el.scrollTop = 0
+
+    startTimeout = setTimeout(() => {
+      if (!scrollRef.current || stopped) return
+
+      const currentEl = scrollRef.current
+      const maxScroll = currentEl.scrollHeight - currentEl.clientHeight
+
+      // Si no hay overflow, espera un poco y pasa al siguiente
+      if (maxScroll <= 0) {
+        endTimeout = setTimeout(() => {
+          if (!stopped) {
+            setDirection(1)
+            setIndex((prev) => (prev + 1) % testimonials.length)
+          }
+        }, 5000)
+        return
+      }
+
+      interval = setInterval(() => {
+        if (!scrollRef.current || stopped) return
+
+        // pausa si el usuario interactuó
+        if (Date.now() < pauseUntilRef.current) return
+
+        const elNow = scrollRef.current
+        const limit = elNow.scrollHeight - elNow.clientHeight
+
+        if (elNow.scrollTop >= limit) {
+          if (interval) {
+            clearInterval(interval)
+            interval = null
+          }
+
+          endTimeout = setTimeout(() => {
+            if (!stopped) {
+              setDirection(1)
+              setIndex((prev) => (prev + 1) % testimonials.length)
+            }
+          }, 5000)
+
+          return
+        }
+
+        // marcamos que el scroll es automático
+        isAutoScrollingRef.current = true
+        elNow.scrollTop += 1
+
+        setTimeout(() => {
+          isAutoScrollingRef.current = false
+        }, 0)
+
+      }, 45)
+    }, 400)
+
+    return () => {
+      stopped = true
+      if (startTimeout) clearTimeout(startTimeout)
+      if (endTimeout) clearTimeout(endTimeout)
+      if (interval) clearInterval(interval)
+    }
+  }, [index])
 
   const next = () => {
     setDirection(1)
@@ -84,45 +175,45 @@ export function Testimonials() {
     <section id="testimonios" className="bg-card py-28">
       <div className="mx-auto max-w-5xl px-6">
 
-        {/* titulo */}
-        <div className="text-center mb-16">
-          <motion.h2 initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }} 
-            className="text-3xl md:text-4xl">
+        <div className="mb-16 text-center">
+          <h2
+            className="text-3xl md:text-4xl"
+          >
             TESTIMONIOS
-          </motion.h2>
+          </h2>
         </div>
 
-        {/* slider */}
-        <div className="relative rounded-xl border border-red-900/50 bg-[#1E1D1D]/40 shadow-lg p-10">
-
-          {/* contenedor con altura fija */}
-          <div className="relative h-[320px] overflow-hidden flex items-center justify-center">
-
-            <AnimatePresence mode="wait">
-
+        <div className="relative rounded-xl border border-red-900/50 bg-[#1E1D1D]/40 p-6 shadow-lg md:p-10">
+          <div className="relative flex min-h-[360px] items-center justify-center overflow-hidden md:min-h-[320px]">
+            <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={index}
+                custom={direction}
                 variants={variants}
                 initial="enter"
                 animate="center"
                 exit="exit"
                 transition={{ duration: 0.4 }}
-                className="flex flex-col items-center text-center"
+                className="flex w-full flex-col items-center text-center"
               >
-
-                <div className="flex gap-1 mb-4">
+                <div className="mb-4 flex gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} size={16} className="fill-current" />
                   ))}
                 </div>
 
                 <div className="max-w-2xl">
-                  <p className="text-sm leading-relaxed text-foreground">
-                    “{testimonial.quote}”
-                  </p>
+                  <div
+                    ref={scrollRef}
+                    onWheel={pauseAutoScroll}
+                    onTouchStart={pauseAutoScroll}
+                    onPointerDown={pauseAutoScroll}
+                    className="max-h-[180px] max-w-2xl overflow-y-auto custom-scroll pr-2"
+                  >
+                    <p className="text-sm leading-relaxed text-foreground md:text-base">
+                      “{testimonial.quote}”
+                    </p>
+                  </div>
                 </div>
 
                 <div className="mt-6">
@@ -130,42 +221,38 @@ export function Testimonials() {
                     {testimonial.name}
                   </p>
                 </div>
-
               </motion.div>
-
             </AnimatePresence>
-
           </div>
 
-          {/* botones */}
           <button
             onClick={prev}
-            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-muted transition"
+            className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full p-2 transition hover:bg-muted md:left-4"
           >
             <ChevronLeft size={22} />
           </button>
 
           <button
             onClick={next}
-            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-muted transition"
+            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-2 transition hover:bg-muted md:right-4"
           >
             <ChevronRight size={22} />
           </button>
-
         </div>
 
-        {/* indicadores */}
-        <div className="flex justify-center gap-3 mt-8">
+        <div className="mt-8 flex justify-center gap-3">
           {testimonials.map((_, i) => (
             <button
               key={i}
-              onClick={() => setIndex(i)}
+              onClick={() => {
+                setDirection(i > index ? 1 : -1)
+                setIndex(i)
+              }}
               className={`h-2 w-2 rounded-full transition ${i === index ? "bg-foreground" : "bg-muted"
                 }`}
             />
           ))}
         </div>
-
       </div>
     </section>
   )

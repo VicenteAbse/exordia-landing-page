@@ -12,7 +12,7 @@ export function WhatWeDo() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true, margin: "-100px" }}
-                    className="text-center text-4xl md:text-5xl text-foreground">
+                    className="mb-10 md:mb-0 text-center text-4xl md:text-5xl text-foreground">
                     ¿QUÉ HACEMOS?
                 </motion.h2>
                 <div className="grid gap-16 lg:grid-cols-12 lg:items-center">

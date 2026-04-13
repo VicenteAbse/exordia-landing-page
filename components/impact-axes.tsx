@@ -71,8 +71,8 @@ export function ImpactAxes() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }} className="mt-4 leading-relaxed text-muted-foreground">
-                        Más allá de las áreas de práctica, nuestro trabajo está guiado por ejes de impacto que constituyen nuestra
-                        identidad y desde los cuales fijamos objetivos de transformación social. Elegimos nuestras causas —y las trabajamos—
+                        Más allá de las áreas de práctica, nuestro trabajo está guiado por ejes de impacto que constituyen nuestra 
+                        identidad y desde los cuales fijamos objetivos de transformación social. Elegimos nuestras causas - y las trabajamos -  
                         en función de estos compromisos.
                     </motion.p>
                 </div>
