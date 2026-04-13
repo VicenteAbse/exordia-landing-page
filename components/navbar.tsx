@@ -9,7 +9,7 @@ const navLinks = [
   // { label: "INICIO", href: "#inicio" },
   { label: "¿QUIÉNES SOMOS?", href: "#quienes-somos" },
   { label: "¿QUÉ HACEMOS?", href: "#que-hacemos" },
-  { label: "LA DIFERENCIA", href: "#difference" },
+  { label: "LO DIFERENTE", href: "#difference" },
   { label: "BLOG", href: "#blog" },
   { label: "CONTACTO", href: "#contacto" },
 ]
@@ -37,7 +37,7 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? "bg-[#1E1D1D]/95 backdrop-blur-md shadow-lg border-b border-border"
+        ? "bg-card backdrop-blur-md shadow-lg border-b border-border"
         : "bg-transparent"
         }`}
     >

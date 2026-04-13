@@ -19,33 +19,37 @@ export default function BlogPage() {
     }, [query])
 
     return (
-        <section className="bg-card py-24 md:py-32 min-h-screen">
+        <section className="bg-card py-24 md:py-22 min-h-screen">
             <div className="mx-auto max-w-7xl px-6">
 
                 {/* Header */}
-                <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between mb-12">
-                    <h1 className="text-3xl md:text-4xl text-foreground uppercase">
-                        Blog y recursos
-                    </h1>
+                <div className="mb-12">
 
+                    {/* Botón volver arriba */}
                     <Link href="/#blog">
-                        <button className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition">
-                            <ArrowLeft className="size-4" />
+                        <button className="group mb-6 flex items-center gap-2 border border-border text-foreground px-4 py-2 rounded-md hover:bg-background hover:border-foreground/30 cursor-pointer transition-all duration-200">
+                            <ArrowLeft className="size-4 transition-transform duration-200 group-hover:-translate-x-1" />
                             Volver
                         </button>
                     </Link>
-                </div>
 
-                {/* 🔎 Buscador */}
-                <div className="relative mb-12 max-w-md">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
-                    <input
-                        type="text"
-                        placeholder="Buscar artículos..."
-                        value={query}
-                        onChange={(e) => setQuery(e.target.value)}
-                        className="w-full rounded-md border border-border bg-background pl-10 pr-4 py-2 text-sm outline-none focus:border-foreground/30"
-                    />
+                    {/* Título */}
+                    <h1 className="text-3xl md:text-4xl text-foreground uppercase mb-6 mt-20">
+                        Blog y recursos
+                    </h1>
+
+                    {/* Buscador */}
+                    <div className="relative w-full md:max-w-md">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
+                        <input
+                            type="text"
+                            placeholder="Buscar artículos..."
+                            value={query}
+                            onChange={(e) => setQuery(e.target.value)}
+                            className="w-full rounded-md border border-border bg-background pl-10 pr-4 py-2 text-sm outline-none focus:border-foreground/30"
+                        />
+                    </div>
+
                 </div>
 
                 {/* Grid */}

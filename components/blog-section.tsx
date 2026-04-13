@@ -30,10 +30,10 @@ export function BlogSection() {
           <Link href="/blog">
             <Button
               variant="outline"
-              className="border-border text-foreground hover:bg-background shrink-0"
+              className="group border-border text-foreground hover:bg-background hover:border-foreground/30 hover:text-foreground cursor-pointer transition-all duration-200 shrink-0"
             >
-              Ver todos los articulos
-              <ArrowRight className="ml-2 size-4" />
+              Ver todos los artículos
+              <ArrowRight className="ml-2 size-4 transition-transform duration-200 group-hover:translate-x-1" />
             </Button>
           </Link>
         </div>
@@ -46,7 +46,7 @@ export function BlogSection() {
               className="group flex flex-col rounded-lg border border-border bg-background overflow-hidden transition-all hover:border-foreground/20 hover:shadow-md text-left cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-label={`Leer articulo: ${article.title}`}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 w-full overflow-hidden">
                 <Image
                   src={article.image}
                   alt={article.title}

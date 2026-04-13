@@ -132,7 +132,7 @@ export function ImpactAxes() {
                             </DialogHeader>
 
                             {/* Resumen (AHORA DESTACA) */}
-                            <p className="mt-4 text-lg md:text-xl font-medium text-foreground leading-relaxed">
+                            <p className="mt-4 text-lg md:text-xl font-medium text-foreground leading-relaxed text-justify">
                                 {selected.summary}
                             </p>
 
@@ -149,7 +149,7 @@ export function ImpactAxes() {
                                 className={`transition-all duration-300 overflow-hidden ${expanded ? "max-h-[1000px] mt-4" : "max-h-0"
                                     }`}
                             >
-                                <div className="prose prose-sm md:prose-base max-w-none text-muted-foreground">
+                                <div className="prose prose-sm md:prose-base max-w-none text-muted-foreground text-justify">
                                     {selected.detail}
                                 </div>
                             </div>

@@ -75,7 +75,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contacto" className="bg-background py-24 md:py-32">
+    <section id="contacto" className="bg-card py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl text-foreground md:text-4xl text-balance uppercase">
@@ -86,7 +86,7 @@ export function Contact() {
         <div className="mt-16 grid gap-12 lg:grid-cols-[1fr_1.2fr]">
           {/* Info */}
           <div className="flex flex-col gap-8">
-            <div className="rounded-lg border border-border bg-card p-8">
+            <div className="rounded-lg border border-border bg-background p-8">
               <h3 className="text-xl text-foreground mb-6">
                 Información de contacto
               </h3>
@@ -113,7 +113,7 @@ export function Contact() {
                   <div>
                     <p className="font-medium text-foreground">Teléfono</p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      +569 12345678
+                      +569 50696309
                     </p>
                   </div>
                 </div>
@@ -148,9 +148,9 @@ export function Contact() {
           </div>
 
           {/* Form */}
-          <div className="rounded-lg border border-border bg-card p-8">
+          <div className="rounded-lg border border-border bg-background p-8">
             <h3 className="text-xl font-semibold text-foreground mb-6">
-              Envie su consulta
+              Contáctanos
             </h3>
 
             {submitted ? (
@@ -257,7 +257,7 @@ export function Contact() {
                   className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium w-full sm:w-auto disabled:opacity-70"
                 >
                   <Send className="mr-2 size-4" />
-                  {loading ? "Enviando..." : "Contáctanos"}
+                  {loading ? "Enviando..." : "Enviar"}
                 </Button>
               </form>
             )}

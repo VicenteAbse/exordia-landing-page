@@ -81,7 +81,7 @@ export function Testimonials() {
   }
 
   return (
-    <section id="testimonios" className="bg-background py-28">
+    <section id="testimonios" className="bg-card py-28">
       <div className="mx-auto max-w-5xl px-6">
 
         {/* titulo */}

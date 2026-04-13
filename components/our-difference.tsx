@@ -44,9 +44,9 @@ const items: Item[] = [
 
 export function OurDifference() {
     return (
-        <section id="difference" className="w-full">
+        <section id="difference" className="w-full bg-card">
 
-            <div className="relative h-[480px] w-full flex items-start justify-center pt-90 overflow-hidden">
+            <div className="relative h-[480px] w-full flex items-start justify-center pt-90 overflow-hidden bg-card">
 
                 <motion.div
                     initial={{ opacity: 0, scale: 1.05 }}
@@ -77,7 +77,7 @@ export function OurDifference() {
             </div>
 
             {/* contenido */}
-            <div className="bg-black py-24">
+            <div className="bg-card py-24">
                 <div className="mx-auto max-w-7xl px-6">
 
                     <motion.div
@@ -115,11 +115,11 @@ export function OurDifference() {
                                     <h3 className="text-xl">
                                         {item.title}
                                     </h3>
-                                    <div className="mt-2 h-[1px] w-full bg-red-900/80" />
+                                    <div className="h-[1px] w-full bg-red-900/80" />
                                 </div>
 
                                 {/* contenido */}
-                                <p className="text-white/80 leading-relaxed text-base text-justify">
+                                <p className="mt-4 text-muted-foreground leading-relaxed text-base text-justify">
                                     {item.content}
                                 </p>
                             </motion.div>

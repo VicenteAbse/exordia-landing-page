@@ -5,14 +5,14 @@ import { motion } from "framer-motion"
 
 export function WhatWeDo() {
     return (
-        <section id="que-hacemos" className="bg-card py-32 md:py-38">
+        <section id="que-hacemos" className="bg-card py-32">
             <div className="mx-auto max-w-7xl px-6">
                 <motion.h2
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     viewport={{ once: true, margin: "-100px" }}
-                    className="mb-12 text-center text-4xl md:text-5xl text-foreground">
+                    className="text-center text-4xl md:text-5xl text-foreground">
                     ¿QUÉ HACEMOS?
                 </motion.h2>
                 <div className="grid gap-16 lg:grid-cols-12 lg:items-center">

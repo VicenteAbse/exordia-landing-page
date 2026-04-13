@@ -14,7 +14,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'ABRyL | DERECHO Y LITIGIO HECHO DIFERENTE',
-  description: 'Bufete de abogados con amplia experiencia en derecho corporativo, civil, penal y familiar. Consulta gratuita.',
+  description: 'Bufete de abogados con amplia experiencia en derecho corporativo, civil, penal y familiar.',
   icons: {
     icon: [
       {

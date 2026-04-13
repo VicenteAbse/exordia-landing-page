@@ -31,22 +31,22 @@ const lawyers: Lawyer[] = [
     role: "Socia fundadora",
     image: "/images/1-camila.jpg",
     image_sec: "/images/2-camila.jpg",
-    specialties: ["Derecho Civil ", "Derecho Penal"],
+    specialties: ["Derecho Civil ", "Derecho Penal", "Arbitraje y resolución alternativa de conflictos"],
     bio: "Abogada de la Universidad de Chile, candidata a magíster en Derecho en la misma casa de estudios. Desde 2021 dirige la gestión y tramitación de causas en materias civiles, penales, de familia y derechos fundamentales, ejecutando un modelo de litigación con enfoque interseccional. Tiene estudios de postítulo en derechos de la niñez, procedimiento penal y litigación ante el sistema interamericano de derechos humanos. Ha ejercido docencia en la Universidad Adolfo Ibáñez y la Universidad de Santiago. Fue ayudante de cátedra en las Facultades de Economía y Negocios, y de Derecho, ambas de la Universidad de Chile. Su área de trabajo se centra en arbitrajes y resolución alternativa de conflictos, Derecho Civil y Derecho Penal.",
     education: "Universidad de Chile - Abogada",
-    email: "camilaramirezrebolledo@gmail.com",
+    email: "camila.ramirez@abryl.cl",
     phone: "+569 12345678",
-    languages: ["Español"]
+    languages: ["Español", "Inglés"]
   },
   {
     name: "María Barbosa Barceló",
     role: "Socio fundadora",
     image: "/images/1-maria.jpg",
     image_sec: "/images/2-maria.jpg",
-    specialties: ["Derecho de Familia", "Derecho Penal"],
+    specialties: ["Derecho de Familias", "Derecho Penal"],
     bio: "Abogada de la Universidad de Chile. Tiene un máster en Derecho Penal y Ciencias Criminales por la Universidad de Sevilla, con tesis en materia de consentimiento sexual. Está especializada en violencia sexual, abuso infantil y trauma complejo, con estudios en materias de familia, derecho penal y razonamiento probatorio en el Instituto de Estudios Judiciales y Universidad de Girona, además de formación recibida por instituciones como Fundación para la Confianza y ECPAT. Fue ayudante de la Clínica Jurídica de Familia de la Universidad de Chile y ha sido relatora en capacitaciones para funcionarios públicos y asesora de organizaciones de la sociedad civil en temas de género. Su área de trabajo se centra en Derecho de Familia y Derecho Penal.",
     education: "Universidad de Chile - Abogada",
-    email: "mariab@mail.cl",
+    email: "maria.barbosa@abryl.cl",
     phone: "+569 1234678",
     languages: ["Español", "Inglés"]
   },
@@ -58,7 +58,7 @@ const lawyers: Lawyer[] = [
     specialties: ["Derecho Administrativo", "Derecho Civil", "Derecho Penal"],
     bio: "Egresado de Ciencias Jurídicas y Sociales de la Universidad de Chile. Es investigador académico y ayudante de cátedra en Derecho Indígena, Derecho Procesal y Derecho Penal de la misma casa de estudios. Ha ejercido como consultor y asistente legal de organizaciones de la sociedad civil e integra equipos que representan a ciudadanos ante la Comisión Interamericana de Derechos Humanos. Su área de trabajo se centra en Derecho Administrativo, Derecho Civil y Derecho Penal.",
     education: "Universidad de Chile - Egresado de Derecho",
-    email: "lorenzo@mail.com",
+    email: "lorenzo.lemunguru@abryl.cl",
     phone: "+569 12345678",
     languages: ["Español", "Inglés", "Mapuzugun", "Francés", "Alemán"]
   },
