@@ -24,7 +24,7 @@ const testimonials: Testimonial[] = [
   },
   {
     name: "Mauricio Riera Vergara",
-    quote: "A Camila y Lorenzo encomendé no sólo un litigio, sino también la resolución de un conflicto que marcó mi historia de vida. El excelente razonamiento jurídico, la suma diligencia y la calidad humana de ambos amenizó el tormento que significa ser víctima en una causa penal y demandante en una causa contra el Fisco de Chile. El excelente desempeño profesional de esta dupla se materializó en el mejor resultado posible: se condenó al acusado en materia penal y el Fisco tuvo que pagar una indemnización de perjuicios en materia civil. Esto último, una hazaña por la dificultad que significa litigar contra el Consejo de defensa del Estado. Ellos solucionaron un problema legal técnicamente complejo, y aún más importante: lograron que se hiciera justicia, lo que hizo sanar mi corazón."
+    quote: "A Camila y Lorenzo encomendé no sólo un litigio, sino también la resolución de un conflicto que marcó mi historia de vida. El excelente razonamiento jurídico, la suma diligencia y la calidad humana de ambos amenizó el tormento que significa ser víctima en una causa penal y demandante en una causa contra el Fisco de Chile. El excelente desempeño profesional de esta dupla se materializó en el mejor resultado posible: se condenó al acusado en materia penal y el Fisco tuvo que pagar una indemnización de perjuicios en materia civil. Esto último, una hazaña por la dificultad que significa litigar contra el Consejo de Defensa del Estado. Ellos solucionaron un problema legal técnicamente complejo, y aún más importante: lograron que se hiciera justicia, lo que hizo sanar mi corazón."
   },
   {
     name: "Identidad reservada, causa 3206-2023 del TOP Melipilla",

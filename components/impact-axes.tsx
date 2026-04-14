@@ -30,7 +30,7 @@ const axes: Axis[] = [
         title: "INFANCIAS",
         image: "/images/axis-2.jpg",
         detail: "Asumimos la defensa y promoción integral de los derechos de niños, niñas y adolescentes (NNA) desde la convicción de que su condición de sujetos de derecho exige una protección reforzada y una comprensión especializada por parte del sistema jurídico. Si bien, en los últimos años, se han producido avances legislativos significativos, especialmente con la dictación de la Ley Nº 21.430 sobre garantías y protección integral de los derechos de la niñez y adolescencia, la brecha entre la norma y su aplicación efectiva sigue siendo profunda, ya sea por desconocimiento, inercias institucionales o resistencias culturales que continúan tratando a NNA como objetos de tutela y no como titulares plenos de derechos. Por ello, trabajamos esta línea para hacer operativas las garantías legales y convencionales en materias de familia, en delitos cometidos contra menores de edad y en aquellos ejecutados por adolescentes, asegurando que el sistema de responsabilidad penal adolescente respete estándares de especialidad, proporcionalidad y reinserción. Incorporamos de manera técnica la Ley Nº 21.057 sobre entrevista investigativa videograbada, exigiendo su correcta aplicación para evitar la victimización secundaria y asegurar que la prueba se produzca conforme a parámetros de protección y debido proceso. Defendemos también la participación activa de NNA en los asuntos que les afectan, impulsando el respeto de su derecho a ser oídos y a que su opinión sea debidamente considerada en procesos judiciales, administrativos, escolares y sanitarios, y combatimos la persistente falta de comprensión de sus derechos por parte de autoridades y operadores jurídicos. En este eje, nuestro propósito es convertir el reconocimiento normativo en protección real, transformando los estándares legales en herramientas efectivas para asegurar dignidad, autonomía progresiva y acceso sustantivo a la justicia para las niñeces.",
-        summary: "Niños, niñas y adolescentes son titulares plenos de derechos, no objetos de tutela. La brecha entre lo que la ley reconoce y lo que el sistema efectivamente garantiza sigue siendo profunda —por desconocimiento, desidia institucional o resistencias culturales- incluso después de los avances legislativos. El reconocimiento normativo sin aplicación real no es avance: es promesa incumplida."
+        summary: "Niños, niñas y adolescentes son titulares plenos de derechos, no objetos de tutela. La brecha entre lo que la ley reconoce y lo que el sistema efectivamente garantiza sigue siendo profunda -por desconocimiento, desidia institucional o resistencias culturales- incluso después de los avances legislativos. El reconocimiento normativo sin aplicación real no es avance: es promesa incumplida."
     },
     {
         title: "Derechos fundamentales y libertades públicas",
@@ -42,7 +42,7 @@ const axes: Axis[] = [
         title: "Género y no discriminación",
         image: "/images/axis-4.jpg",
         detail: "Tenemos un compromiso irrestricto con la igualdad material y la no discriminación de las mujeres, las disidencias sexuales y las mal llamadas “minorías”, entendiendo que la igualdad formal resulta insuficiente cuando las estructuras sociales reproducen asimetrías de poder, violencia y exclusión. En este sentido, asumimos la perspectiva de género y la mirada interseccional no como una consigna retórica, sino como metodologías jurídicas imprescindibles para interpretar los hechos, valorar la prueba y aplicar el derecho conforme a los estándares constitucionales e internacionales vigentes, especialmente aquellos desarrollados en el sistema interamericano de derechos humanos. Sabemos que, en la práctica forense, las categorías como el género suelen ser incomprendida por los tribunales o utilizadas de manera superficial y desprovistas de estrategia por parte de los litigantes, lo que termina debilitando su potencial transformador; por ello, nos proponemos dotarla de contenido técnico, coherencia argumentativa y sustento probatorio sólido, integrándola desde el diseño del caso hasta la ejecución de la sentencia. Nuestro trabajo busca no solo reparar vulneraciones concretas, sino también incidir en criterios jurisprudenciales, promover estándares de debida diligencia reforzada frente a la violencia de género, cuestionar decisiones estereotipadas y visibilizar discriminaciones estructurales que atraviesan materias tan diversas como el derecho civil, de familia, penal, administrativo y constitucional. Así, fortalecemos lo que hasta ahora se ha conquistado en materia de igualdad sustantiva y ampliamos su alcance, convencidas de que la defensa con enfoque de género no es un ámbito sectorial del derecho, sino una exigencia transversal para asegurar dignidad, autonomía y acceso real a la justicia.",
-        summary: "La perspectiva de género y el enfoque interseccional son metodologías jurídicas con contenido técnico preciso, no etiquetas retóricas. Aplicadas con rigor —en el diseño del caso, en la valoración de la prueba, en la argumentación— tienen capacidad de incidir en criterios jurisprudenciales y corregir discriminaciones que la aplicación mecánica y formalista del derecho invisibiliza."
+        summary: "La perspectiva de género y el enfoque interseccional son metodologías jurídicas con contenido técnico preciso, no etiquetas retóricas. Aplicadas con rigor -en el diseño del caso, en la valoración de la prueba, en la argumentación- tienen capacidad de incidir en criterios jurisprudenciales y corregir discriminaciones que la aplicación mecánica y formalista del derecho invisibiliza."
     },
 ]
 
@@ -71,8 +71,8 @@ export function ImpactAxes() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }} className="mt-4 leading-relaxed text-muted-foreground">
-                        Más allá de las áreas de práctica, nuestro trabajo está guiado por ejes de impacto que constituyen nuestra 
-                        identidad y desde los cuales fijamos objetivos de transformación social. Elegimos nuestras causas - y las trabajamos -  
+                        Más allá de las áreas de práctica, nuestro trabajo está guiado por ejes de impacto que constituyen nuestra
+                        identidad y desde los cuales fijamos objetivos de transformación social. Elegimos nuestras causas -y las trabajamos-
                         en función de estos compromisos.
                     </motion.p>
                 </div>
@@ -146,7 +146,7 @@ export function ImpactAxes() {
 
                             {/* Contenido expandible */}
                             <div
-                                className={`transition-all duration-300 overflow-hidden ${expanded ? "max-h-[1000px] mt-4" : "max-h-0"
+                                className={`transition-all duration-300 overflow-hidden ${expanded ? "max-h-[3000px] mt-4" : "max-h-0"
                                     }`}
                             >
                                 <div className="prose prose-sm md:prose-base max-w-none text-muted-foreground text-justify">

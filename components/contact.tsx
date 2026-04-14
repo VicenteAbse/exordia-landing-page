@@ -253,7 +253,7 @@ export function Contact() {
                     id="mensaje"
                     value={formData.mensaje}
                     onChange={handleChange}
-                    placeholder="Describa brevemente su situacion legal..."
+                    placeholder="Describe brevemente tu situación legal..."
                     rows={5}
                     required
                     className="bg-background border-border text-foreground placeholder:text-muted-foreground resize-none"

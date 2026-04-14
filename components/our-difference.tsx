@@ -11,32 +11,32 @@ interface Item {
 
 const items: Item[] = [
     {
-        title: "Cada caso como unidad irrepetible.",
+        title: "Cada caso como unidad irrepetible",
         content:
             "No somos parte de la industria legal, no entregamos servicios en masa ni de forma mecánica. Estudiamos cada caso con dedicación total, sin dejar nada al azar, porque en un juicio todos los detalles importan. Medimos nuestra carga de trabajo con cuidado para que cada persona tenga la atención que merece.",
     },
     {
-        title: "No nos apropiamos del conflicto.",
+        title: "No nos apropiamos del conflicto",
         content:
             "Generamos condiciones para la confianza, la colaboración y las decisiones conscientes, en la que el protagonismo sea de quien vive el conflicto. La persona que solicita nuestra representación es quien decide cómo quiere interactuar con el proceso y es con quien fijamos un objetivo en común. Un proceso no solo requiere conocimiento técnico, sino competencias emocionales y reflexión humana."
     },
     {
-        title: "Práctica legal empática y sensible al trauma.",
+        title: "Práctica legal empática y sensible al trauma",
         content:
             "Nos parece esencial trasladar la complejidad de la ley al lenguaje común. Explicamos cómo funcionan los procedimientos y empleamos métodos que contribuyen a disminuir el estrés, la ansiedad, el dolor emocional y la victimización secundaria que generan los procesos judiciales."
     },
     {
-        title: "Trabajo colectivo siempre.",
+        title: "Trabajo colectivo siempre",
         content:
             "A diferencia de otros estudios, no dividimos las causas entre quienes integramos el equipo. Cada caso es analizado desde distintas miradas. Nuestro sistema interno está diseñado para alcanzar un balance entre control de riesgos y dinamismo. Tres cabezas piensan mejor que una."
     },
     {
-        title: "Transparencia radical.",
+        title: "Transparencia radical",
         content:
             "No presentamos escenarios judiciales caprichosos ni hacemos promesas difíciles de cumplir. Decimos abiertamente lo que sucede en tribunales y lo que podemos lograr. Con esa misma transparencia hablamos de honorarios: planes de pago escalonados y flexibles, sin cobros sorpresivos."
     },
     {
-        title: "La ley para el bien.",
+        title: "La ley para el bien",
         content:
             "Litigamos causas que nos importan y que nos hacen crecer como profesionales. Cuando se elevan los estándares de atención, se exige al Estado que cumpla su función y se desafían las prácticas legales que generan injusticias, la sociedad entera se beneficia."
     },
@@ -81,8 +81,8 @@ export function OurDifference() {
                 <div className="mx-auto max-w-7xl px-6">
                     <p className="mb-20 text-muted-foreground leading-relaxed text-base text-justify">
                         En ABRyL la excelencia técnica no se ejerce con independencia de las personas que están detrás del caso,
-                        ni de las consecuencias que ese caso tiene en la sociedad. Esa conexión - entre el rigor del trabajo, el
-                        cuidado de quien lo vive y el impacto de lo que se construye - es lo que orienta cada decisión que tomamos.
+                        ni de las consecuencias que ese caso tiene en la sociedad. Esa conexión -entre el rigor del trabajo, el
+                        cuidado de quien lo vive y el impacto de lo que se construye- es lo que orienta cada decisión que tomamos.
                         Lo que nos distingue no es solo lo que hacemos, sino cómo y por qué lo hacemos.
                     </p>
 

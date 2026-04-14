@@ -78,7 +78,7 @@ export function About() {
               viewport={{ once: true }}
               className="mt-4 leading-relaxed text-muted-foreground text-justify"
             >
-              Entendemos la representación legal de las personas ante tribunales - el litigio- 
+              Entendemos la representación legal de las personas ante tribunales -el litigio- 
               como un trabajo de alta especialización que debe ser diseñado estratégicamente caso a caso.
 
               Ejercemos nuestro rol en clave social. Al elevar los estándares reales del 
