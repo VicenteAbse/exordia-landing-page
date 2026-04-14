@@ -175,7 +175,7 @@ export async function POST(req: NextRequest) {
     const safeMensaje = escapeHtml(mensaje).replace(/\n/g, "<br/>");
 
     const { error } = await resend.emails.send({
-      from: "Formulario Web <contacto@abryl.cl>",
+      from: "Formulario Web <noreply@abryl.cl>",
       to,
       subject: `Nueva consulta: ${asunto}`,
       replyTo: email,
