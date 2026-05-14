@@ -13,6 +13,8 @@ import { Testimonials } from "@/components/testimonials"
 import { client } from "@/sanity/client"
 import { type SanityDocument } from "next-sanity"
 
+export const revalidate = 60
+
 const POSTS_QUERY = `*[_type == "post"] | order(date desc)[0...3]{
   slug,
   title,

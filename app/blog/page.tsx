@@ -4,6 +4,8 @@ import { client } from "@/sanity/client"
 import { type SanityDocument } from "next-sanity"
 import { BlogList } from "./_blog-list"
 
+export const revalidate = 60
+
 const POSTS_QUERY = `*[_type == "post"]{
   slug,
   title,

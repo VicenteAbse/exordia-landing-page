@@ -7,6 +7,8 @@ import { PortableText } from "@portabletext/react"
 import { urlFor } from "@/sanity/image"
 import { AUTHORS, formatDate } from "@/lib/blog-utils"
 
+export const revalidate = 60
+
 const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]{
   slug,
   title,
