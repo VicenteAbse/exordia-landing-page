@@ -10,8 +10,22 @@ import { WhatWeDo } from "@/components/what-we-do"
 import { ImpactAxes } from "@/components/impact-axes"
 import { OurDifference } from "@/components/our-difference"
 import { Testimonials } from "@/components/testimonials"
+import { client } from "@/sanity/client"
+import { type SanityDocument } from "next-sanity"
 
-export default function Home() {
+const POSTS_QUERY = `*[_type == "post"] | order(date desc)[0...3]{
+  slug,
+  title,
+  body,
+  author,
+  date,
+  category,
+  image
+}`
+
+export default async function Home() {
+  const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY)
+
   return (
     <main>
       <Navbar />
@@ -23,7 +37,7 @@ export default function Home() {
       <ImpactAxes />
       <Testimonials />
       <OurDifference />
-      <BlogSection />
+      <BlogSection posts={posts} />
       <Contact />
     </main>
   )
