@@ -80,7 +80,7 @@ export function OurDifference() {
             <div className="bg-card py-20">
                 <div className="mx-auto max-w-7xl px-6">
                     <p className="mb-20 text-muted-foreground leading-relaxed text-base text-justify">
-                        En ABRyL la excelencia técnica no se ejerce con independencia de las personas que están detrás del caso,
+                        En nuestro estudio jurídico la excelencia técnica no se ejerce con independencia de las personas que están detrás del caso,
                         ni de las consecuencias que ese caso tiene en la sociedad. Esa conexión -entre el rigor del trabajo, el
                         cuidado de quien lo vive y el impacto de lo que se construye- es lo que orienta cada decisión que tomamos.
                         Lo que nos distingue no es solo lo que hacemos, sino cómo y por qué lo hacemos.

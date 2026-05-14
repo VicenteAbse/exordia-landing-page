@@ -109,7 +109,7 @@ export function Contact() {
                     <p className="mt-1 text-sm text-muted-foreground">
                       Miguel Claro 195, Oficina 407
                       <br />
-                      Providencia, Región Metropolitana de Santiago, Chile
+                      Providencia, Santiago, Región Metropolitana
                     </p>
                   </div>
                 </div>

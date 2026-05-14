@@ -61,7 +61,7 @@ export function Hero() {
       <section className="bg-card py-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-muted-foreground text-lg leading-loose max-w-6xl mx-auto tracking-wide">
-            En ABRyL hacemos que la ley funcione para quienes realmente la necesitan. Defendemos el Derecho para el bien, practicamos la
+            En Abogadas Barbosa, Ramírez y Lemungürü hacemos que la ley funcione para quienes realmente la necesitan. Defendemos el Derecho para el bien, practicamos la
             transparencia como norma y ponemos a las personas en el centro. Así, apostamos por elevar el nivel de la profesión jurídica, construyendo resultados sólidos 
             en las regiones Metropolitana y de Valparaíso.
           </p>

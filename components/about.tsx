@@ -48,7 +48,7 @@ export function About() {
               viewport={{ once: true }}
               className="mb-3 text-3xl text-foreground md:text-4xl text-balance"
             >
-              SOBRE ABRyL
+              SOBRE EL ESTUDIO JURÍDICO
             </motion.h2>
 
             {/* párrafo 1 */}
@@ -59,7 +59,7 @@ export function About() {
               viewport={{ once: true }}
               className="mt-6 leading-relaxed text-muted-foreground mx-auto text-justify"
             >
-              Somos un equipo legal formado en la Escuela de Derecho de la Universidad de Chile,
+              Somos un equipo legal originalmente formado en Santiago, en la Escuela de Derecho de la Universidad de Chile,
               unido por el compromiso con una práctica legal rigurosa, responsable, transparente
               y empática. Vemos en el Derecho un potencial transformador, sin perder de vista las
               deficiencias del sistema de justicia ni lo abrumador que puede ser un proceso judicial
